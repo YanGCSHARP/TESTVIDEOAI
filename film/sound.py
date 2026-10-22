@@ -512,7 +512,7 @@ def reverb(x, seconds=2.4, wet=0.25):
 # ================================================================= mix
 
 def duck(vo, depth_db):
-    e = np.sqrt(uniform_filter1d(vo ** 2, int(0.01 * SR)))
+    e = np.sqrt(np.maximum(uniform_filter1d(vo ** 2, int(0.01 * SR)), 0))
     act = maximum_filter1d((e > 0.01).astype(float), int(0.35 * SR))
     target = np.where(act > 0, db(depth_db), 1.0)
     out = np.empty(len(vo))
