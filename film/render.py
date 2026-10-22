@@ -22,10 +22,22 @@ if __name__ == "__main__":
     step = math.ceil(n / chunks)
     jobs = [(tl_path, i, min(n, i + step), os.path.join(tmp, f"part_{k:03d}.mp4"), "shots")
             for k, i in enumerate(range(0, n, step))]
+    def complete(job):
+        """A chunk from an earlier, interrupted run is reused if it has every frame."""
+        _, i0, i1, path, _ = job
+        if not os.path.exists(path):
+            return False
+        r = subprocess.run(["ffprobe", "-v", "error", "-count_packets", "-select_streams", "v",
+                            "-show_entries", "stream=nb_read_packets", "-of", "csv=p=0", path],
+                           capture_output=True, text=True)
+        return r.stdout.strip() == str(i1 - i0)
+
+    todo = [j for j in jobs if not complete(j)]
+    print(f"{len(jobs) - len(todo)}/{len(jobs)} chunks already done, rendering {len(todo)}", flush=True)
     t0 = time.time()
     with Pool(workers) as pool:
-        for k, p in enumerate(pool.imap(render_range, jobs)):
-            print(f"chunk {k + 1}/{len(jobs)} done, {time.time() - t0:.0f}s", flush=True)
+        for k, p in enumerate(pool.imap(render_range, todo)):
+            print(f"chunk {k + 1}/{len(todo)} done, {time.time() - t0:.0f}s", flush=True)
     lst = os.path.join(tmp, "list.txt")
     with open(lst, "w") as f:
         for _, _, _, p, _ in jobs:
