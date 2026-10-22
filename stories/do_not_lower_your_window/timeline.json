@@ -1,0 +1,3293 @@
+{
+ "scenes": [
+  {
+   "id": "S00",
+   "title": "Cold open",
+   "start": 0.0,
+   "end": 35.496,
+   "hud": null
+  },
+  {
+   "id": "S01",
+   "title": "An ordinary route",
+   "start": 35.496,
+   "end": 77.78,
+   "hud": {
+    "time": "2:01 AM"
+   }
+  },
+  {
+   "id": "S02",
+   "title": "The sign",
+   "start": 77.78,
+   "end": 125.745,
+   "hud": {
+    "time": "2:05 AM"
+   }
+  },
+  {
+   "id": "S03",
+   "title": "The only lit building",
+   "start": 125.745,
+   "end": 171.118,
+   "hud": {
+    "time": "2:09 AM"
+   }
+  },
+  {
+   "id": "S04",
+   "title": "Unfinished work",
+   "start": 171.118,
+   "end": 206.82,
+   "hud": {
+    "time": "2:11 AM"
+   }
+  },
+  {
+   "id": "S05",
+   "title": "The handle",
+   "start": 206.82,
+   "end": 250.938,
+   "hud": {
+    "time": "2:13 AM"
+   }
+  },
+  {
+   "id": "S06",
+   "title": "Nothing broken",
+   "start": 250.938,
+   "end": 299.357,
+   "hud": {
+    "time": "2:16 AM"
+   }
+  },
+  {
+   "id": "S07",
+   "title": "No signal",
+   "start": 299.357,
+   "end": 341.832,
+   "hud": {
+    "time": "2:18 AM",
+    "miles_to_exit": 3.8
+   }
+  },
+  {
+   "id": "S08",
+   "title": "The crosswalk",
+   "start": 341.832,
+   "end": 383.129,
+   "hud": {
+    "time": "2:23 AM",
+    "miles_to_exit": 2.9
+   }
+  },
+  {
+   "id": "S09",
+   "title": "The pattern",
+   "start": 383.129,
+   "end": 426.685,
+   "hud": {
+    "time": "2:25 AM",
+    "miles_to_exit": 2.4
+   }
+  },
+  {
+   "id": "S10",
+   "title": "Vehicle screening",
+   "start": 426.685,
+   "end": 476.258,
+   "hud": {
+    "time": "2:29 AM",
+    "miles_to_exit": 1.7
+   }
+  },
+  {
+   "id": "S11",
+   "title": "The price of one sound",
+   "start": 476.258,
+   "end": 519.944,
+   "hud": {
+    "time": "2:31 AM",
+    "miles_to_exit": 1.6
+   }
+  },
+  {
+   "id": "S12",
+   "title": "The checkpoint",
+   "start": 519.944,
+   "end": 568.057,
+   "hud": {
+    "time": "2:38 AM",
+    "miles_to_exit": 0.4
+   }
+  },
+  {
+   "id": "S13",
+   "title": "Step one",
+   "start": 568.057,
+   "end": 615.341,
+   "hud": {
+    "time": "2:41 AM",
+    "miles_to_exit": 0.4
+   }
+  },
+  {
+   "id": "S14",
+   "title": "The mask",
+   "start": 615.341,
+   "end": 664.906,
+   "hud": {
+    "time": "2:42 AM",
+    "miles_to_exit": 0.4
+   }
+  },
+  {
+   "id": "S15",
+   "title": "The alarm",
+   "start": 664.906,
+   "end": 707.796,
+   "hud": {
+    "time": "2:43 AM",
+    "miles_to_exit": 0.4
+   }
+  },
+  {
+   "id": "S16",
+   "title": "One inch",
+   "start": 707.796,
+   "end": 754.582,
+   "hud": {
+    "time": "2:43 AM",
+    "miles_to_exit": 0.4
+   }
+  },
+  {
+   "id": "S17",
+   "title": "The only open road",
+   "start": 754.582,
+   "end": 830.249,
+   "hud": {
+    "time": "2:44 AM"
+   }
+  }
+ ],
+ "shots": [
+  {
+   "id": "S00_A",
+   "scene": "S00",
+   "start": 0.0,
+   "end": 3.886,
+   "framing": "extreme close-up",
+   "camera": "slow push-in",
+   "refs": [
+    "WORKER"
+   ],
+   "prompt": "a blue-gloved hand rises into frame beside a truck door, floodlight glare behind it, rain streaks, face out of frame",
+   "reuse_of": null
+  },
+  {
+   "id": "S00_B",
+   "scene": "S00",
+   "start": 3.886,
+   "end": 10.544,
+   "framing": "close-up through driver window",
+   "camera": "locked, rain drifts",
+   "refs": [
+    "WORKER",
+    "TRUCK"
+   ],
+   "prompt": "the gloved index finger points down at the closed driver window, seen from inside the dark cab, raindrops on glass",
+   "reuse_of": null
+  },
+  {
+   "id": "S00_C",
+   "scene": "S00",
+   "start": 10.544,
+   "end": 20.166,
+   "framing": "medium montage",
+   "camera": "slow lateral drift",
+   "refs": [
+    "DANIEL",
+    "TRUCK"
+   ],
+   "prompt": "daytime memory tone but still muted: Daniel in the cab at a highway weigh station, window down, arm resting on the door, bored and calm",
+   "reuse_of": null
+  },
+  {
+   "id": "S00_D",
+   "scene": "S00",
+   "start": 20.166,
+   "end": 28.014,
+   "framing": "wide",
+   "camera": "very slow push-in",
+   "refs": [
+    "CHECKPOINT",
+    "TRUCK",
+    "WORKER"
+   ],
+   "prompt": "the white box truck stopped before a floodlit roadblock, a lone figure in a white protective suit beside the driver door, night rain",
+   "reuse_of": null
+  },
+  {
+   "id": "S00_E",
+   "scene": "S00",
+   "start": 28.014,
+   "end": 32.496,
+   "framing": "extreme close-up",
+   "camera": "locked",
+   "refs": [
+    "DANIEL"
+   ],
+   "prompt": "Daniel's hand gripping the steering wheel, knuckles pale, his other hand hovering away from the window switch",
+   "reuse_of": null
+  },
+  {
+   "id": "S00_F",
+   "scene": "S00",
+   "start": 32.496,
+   "end": 35.496,
+   "framing": "black",
+   "camera": "none",
+   "refs": [],
+   "prompt": "solid black frame",
+   "reuse_of": null
+  },
+  {
+   "id": "S01_A",
+   "scene": "S01",
+   "start": 35.496,
+   "end": 38.776,
+   "framing": "aerial wide",
+   "camera": "slow drone track",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the white box truck alone on a wet two-lane road through Pennsylvania forest at night, headlights in fog",
+   "reuse_of": null
+  },
+  {
+   "id": "S01_B",
+   "scene": "S01",
+   "start": 38.776,
+   "end": 47.997,
+   "framing": "medium, from passenger seat",
+   "camera": "subtle handheld sway",
+   "refs": [
+    "DANIEL",
+    "TRUCK"
+   ],
+   "prompt": "Daniel driving, relaxed, empty paper coffee cup in holder, phone in dash mount glowing blue",
+   "reuse_of": null
+  },
+  {
+   "id": "S01_C",
+   "scene": "S01",
+   "start": 47.997,
+   "end": 57.069,
+   "framing": "insert",
+   "camera": "slow push-in",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "close-up of the phone in the dash mount showing a blank glowing navigation screen (route drawn as overlay later)",
+   "reuse_of": null
+  },
+  {
+   "id": "S01_D",
+   "scene": "S01",
+   "start": 57.069,
+   "end": 63.932,
+   "framing": "through windshield",
+   "camera": "locked to cab",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "view through the windshield, wipers mid-sweep, wet road and reflectors ahead, amber dashboard glow",
+   "reuse_of": null
+  },
+  {
+   "id": "S01_E",
+   "scene": "S01",
+   "start": 63.932,
+   "end": 77.78,
+   "framing": "wide side tracking",
+   "camera": "parallel tracking",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the truck passing a dark closed roadside diner and a gravel lot, rain under a single streetlight",
+   "reuse_of": null
+  },
+  {
+   "id": "S02_A",
+   "scene": "S02",
+   "start": 77.78,
+   "end": 88.245,
+   "framing": "wide from approaching cab",
+   "camera": "slow push as truck approaches",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "a temporary road sign on steel legs at the roadside, lamp on top, blank white panel, rain in the lamp beam, forest edge",
+   "reuse_of": null
+  },
+  {
+   "id": "S02_B",
+   "scene": "S02",
+   "start": 88.245,
+   "end": 99.535,
+   "framing": "close-up",
+   "camera": "slow pan across panel",
+   "refs": [],
+   "prompt": "close-up of the white panel, printed area scribbled over with heavy black marker strokes, surface torn in places, BLANK space where letters will be overlaid",
+   "reuse_of": null
+  },
+  {
+   "id": "S02_C",
+   "scene": "S02",
+   "start": 99.535,
+   "end": 103.349,
+   "framing": "close-up",
+   "camera": "locked",
+   "refs": [
+    "DANIEL",
+    "TRUCK"
+   ],
+   "prompt": "Daniel's eyes in the side window reflection, closed glass beaded with rain",
+   "reuse_of": null
+  },
+  {
+   "id": "S02_D",
+   "scene": "S02",
+   "start": 103.349,
+   "end": 117.155,
+   "framing": "wide through side window",
+   "camera": "slow lateral drift",
+   "refs": [],
+   "prompt": "distant industrial processing plant lights through trees and mist, no smoke, no fire",
+   "reuse_of": null
+  },
+  {
+   "id": "S02_E",
+   "scene": "S02",
+   "start": 117.155,
+   "end": 125.745,
+   "framing": "through windshield",
+   "camera": "locked",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "an ambulance with flashing red-and-white emergency lights passes in the opposite lane, its cabin dark, then gone",
+   "reuse_of": null
+  },
+  {
+   "id": "S03_A",
+   "scene": "S03",
+   "start": 125.745,
+   "end": 136.915,
+   "framing": "wide establishing",
+   "camera": "slow push-in",
+   "refs": [
+    "FUEL",
+    "SEDAN"
+   ],
+   "prompt": "the gas station glowing alone in the rainy dark street, blue sedan at the first pump",
+   "reuse_of": null
+  },
+  {
+   "id": "S03_B",
+   "scene": "S03",
+   "start": 136.915,
+   "end": 142.666,
+   "framing": "high wide",
+   "camera": "locked",
+   "refs": [
+    "FUEL",
+    "TRUCK"
+   ],
+   "prompt": "the white box truck parks at the far edge of the lot, front facing the exit, not at a pump",
+   "reuse_of": null
+  },
+  {
+   "id": "S03_C",
+   "scene": "S03",
+   "start": 142.666,
+   "end": 149.54,
+   "framing": "medium",
+   "camera": "slow dolly along car",
+   "refs": [
+    "SEDAN"
+   ],
+   "prompt": "the empty sedan, driver door open, window down, rain falling onto the dark wet seat, dome light on",
+   "reuse_of": null
+  },
+  {
+   "id": "S03_D",
+   "scene": "S03",
+   "start": 149.54,
+   "end": 157.632,
+   "framing": "insert",
+   "camera": "locked",
+   "refs": [
+    "SEDAN"
+   ],
+   "prompt": "keys hanging in the ignition, dashboard warning light blinking softly",
+   "reuse_of": null
+  },
+  {
+   "id": "S03_E",
+   "scene": "S03",
+   "start": 157.632,
+   "end": 162.662,
+   "framing": "from inside cab",
+   "camera": "locked, wipers off",
+   "refs": [
+    "DANIEL",
+    "FUEL"
+   ],
+   "prompt": "Daniel waits behind the wheel watching the bright store entrance, nobody comes out",
+   "reuse_of": null
+  },
+  {
+   "id": "S03_F",
+   "scene": "S03",
+   "start": 162.662,
+   "end": 171.118,
+   "framing": "medium wide",
+   "camera": "camera stays outside, slow pull-back",
+   "refs": [
+    "DANIEL",
+    "FUEL"
+   ],
+   "prompt": "Daniel crosses the wet apron toward the store entrance, seen from behind, the sedan in the foreground",
+   "reuse_of": null
+  },
+  {
+   "id": "S04_A",
+   "scene": "S04",
+   "start": 171.118,
+   "end": 184.502,
+   "framing": "close tracking",
+   "camera": "slow dolly along counter",
+   "refs": [
+    "FUEL"
+   ],
+   "prompt": "coffee station inside the store, a paper cup under the dispenser, dark coffee overflowing into the drip tray, harsh fluorescent light",
+   "reuse_of": null
+  },
+  {
+   "id": "S04_B",
+   "scene": "S04",
+   "start": 184.502,
+   "end": 188.261,
+   "framing": "low medium",
+   "camera": "locked",
+   "refs": [
+    "FUEL"
+   ],
+   "prompt": "an open cardboard carton of soup cans half unpacked on the aisle floor, some cans on the shelf",
+   "reuse_of": null
+  },
+  {
+   "id": "S04_C",
+   "scene": "S04",
+   "start": 188.261,
+   "end": 193.052,
+   "framing": "insert",
+   "camera": "locked",
+   "refs": [],
+   "prompt": "a smartphone face up on the counter behind the register, screen lit, then dark (caller info blank)",
+   "reuse_of": null
+  },
+  {
+   "id": "S04_D",
+   "scene": "S04",
+   "start": 193.052,
+   "end": 198.44,
+   "framing": "over-the-shoulder",
+   "camera": "very slow push past Daniel",
+   "refs": [
+    "DANIEL",
+    "FUEL"
+   ],
+   "prompt": "Daniel in the foreground, out of focus, a closed gray stockroom door at the back of the store in focus",
+   "reuse_of": null
+  },
+  {
+   "id": "S04_E",
+   "scene": "S04",
+   "start": 198.44,
+   "end": 206.82,
+   "framing": "close-up",
+   "camera": "locked",
+   "refs": [],
+   "prompt": "the stockroom door, its surface flexing very slightly inward at shoulder height as weight leans on it from behind",
+   "reuse_of": null
+  },
+  {
+   "id": "S05_A",
+   "scene": "S05",
+   "start": 206.82,
+   "end": 213.809,
+   "framing": "floor-level close-up",
+   "camera": "locked",
+   "refs": [],
+   "prompt": "gap under a closed door, bright light behind it, the shadows of two feet standing still",
+   "reuse_of": null
+  },
+  {
+   "id": "S05_B",
+   "scene": "S05",
+   "start": 213.809,
+   "end": 223.793,
+   "framing": "low angle",
+   "camera": "locked",
+   "refs": [
+    "DANIEL"
+   ],
+   "prompt": "Daniel's work boot steps back and knocks a soup can, which rolls across the tile floor",
+   "reuse_of": null
+  },
+  {
+   "id": "S05_C",
+   "scene": "S05",
+   "start": 223.793,
+   "end": 233.559,
+   "framing": "extreme close-up",
+   "camera": "slow push-in",
+   "refs": [],
+   "prompt": "a metal lever door handle slowly pressing down from the other side, straining at its limit",
+   "reuse_of": null
+  },
+  {
+   "id": "S05_D",
+   "scene": "S05",
+   "start": 233.559,
+   "end": 240.125,
+   "framing": "medium from passenger side",
+   "camera": "handheld, tense",
+   "refs": [
+    "DANIEL",
+    "TRUCK"
+   ],
+   "prompt": "Daniel slams into the driver seat, hand on the door lock button, engine starting, breath fogging",
+   "reuse_of": null
+  },
+  {
+   "id": "S05_E",
+   "scene": "S05",
+   "start": 240.125,
+   "end": 246.855,
+   "framing": "mirror insert",
+   "camera": "locked",
+   "refs": [
+    "TRUCK",
+    "FUEL"
+   ],
+   "prompt": "the truck's side mirror: the store's glass entrance door swinging open, no person visible yet, the lot receding",
+   "reuse_of": null
+  },
+  {
+   "id": "S05_F",
+   "scene": "S05",
+   "start": 246.855,
+   "end": 250.938,
+   "framing": "wide",
+   "camera": "slow pull-back",
+   "refs": [
+    "FUEL"
+   ],
+   "prompt": "the brightly lit empty gas station from the dark road, rain, truck tail lights leaving frame",
+   "reuse_of": null
+  },
+  {
+   "id": "S06_A",
+   "scene": "S06",
+   "start": 250.938,
+   "end": 261.774,
+   "framing": "through windshield",
+   "camera": "slow creep forward",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "three abandoned cars on a wet small-town main street leaving a single gap, intact bodies, hazard lights off, street lamps",
+   "reuse_of": null
+  },
+  {
+   "id": "S06_B",
+   "scene": "S06",
+   "start": 261.774,
+   "end": 273.446,
+   "framing": "slow lateral pass",
+   "camera": "tracking at walking speed",
+   "refs": [],
+   "prompt": "a sedan with front wheels against the curb, a hatchback diagonal across the center line with exhaust vapor, oranges spilled from a paper grocery bag in the gutter",
+   "reuse_of": null
+  },
+  {
+   "id": "S06_C",
+   "scene": "S06",
+   "start": 273.446,
+   "end": 283.931,
+   "framing": "detail montage",
+   "camera": "slow pans",
+   "refs": [],
+   "prompt": "three car driver windows each fully rolled down, rain falling into the interiors, empty seats",
+   "reuse_of": null
+  },
+  {
+   "id": "S06_D",
+   "scene": "S06",
+   "start": 283.931,
+   "end": 290.689,
+   "framing": "close-up",
+   "camera": "locked",
+   "refs": [],
+   "prompt": "a small yellow child's rain jacket hanging from an open rear car door, swaying in the wind",
+   "reuse_of": null
+  },
+  {
+   "id": "S06_E",
+   "scene": "S06",
+   "start": 290.689,
+   "end": 299.357,
+   "framing": "mirror insert",
+   "camera": "locked",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the side mirror shows empty wet sidewalks and the abandoned cars falling behind",
+   "reuse_of": null
+  },
+  {
+   "id": "S07_A",
+   "scene": "S07",
+   "start": 299.357,
+   "end": 309.715,
+   "framing": "insert",
+   "camera": "locked",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "phone in the dash mount, screen lit (call UI added as overlay), Daniel's finger tapping it, rain on windshield beyond",
+   "reuse_of": null
+  },
+  {
+   "id": "S07_B",
+   "scene": "S07",
+   "start": 309.715,
+   "end": 317.066,
+   "framing": "insert",
+   "camera": "slow push",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the phone screen glowing blue in the dark cab, blank (route line added as overlay)",
+   "reuse_of": null
+  },
+  {
+   "id": "S07_C",
+   "scene": "S07",
+   "start": 317.066,
+   "end": 325.222,
+   "framing": "mirror insert",
+   "camera": "locked",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "side mirror: the dark street behind, abandoned cars swallowed by fog",
+   "reuse_of": null
+  },
+  {
+   "id": "S07_D",
+   "scene": "S07",
+   "start": 325.222,
+   "end": 332.72,
+   "framing": "through windshield",
+   "camera": "steady forward",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "long straight small-town main street, traffic signals cycling green over empty wet road, storefronts dark",
+   "reuse_of": null
+  },
+  {
+   "id": "S07_E",
+   "scene": "S07",
+   "start": 332.72,
+   "end": 341.832,
+   "framing": "close profile",
+   "camera": "locked",
+   "refs": [
+    "DANIEL"
+   ],
+   "prompt": "Daniel's profile lit by dashboard amber, jaw set, eyes forward",
+   "reuse_of": null
+  },
+  {
+   "id": "S08_A",
+   "scene": "S08",
+   "start": 341.832,
+   "end": 350.881,
+   "framing": "medium, from cab",
+   "camera": "slow approach",
+   "refs": [
+    "WOMAN"
+   ],
+   "prompt": "a woman standing motionless at a lit crosswalk in the rain, cream sweater soaked dark, arms straight down, face turned away",
+   "reuse_of": null
+  },
+  {
+   "id": "S08_B",
+   "scene": "S08",
+   "start": 350.881,
+   "end": 354.328,
+   "framing": "insert",
+   "camera": "locked",
+   "refs": [],
+   "prompt": "a pedestrian signal showing the white walking-person symbol, rain streaking past it",
+   "reuse_of": null
+  },
+  {
+   "id": "S08_C",
+   "scene": "S08",
+   "start": 354.328,
+   "end": 363.202,
+   "framing": "close-up",
+   "camera": "locked",
+   "refs": [
+    "DANIEL",
+    "TRUCK"
+   ],
+   "prompt": "Daniel's hand moving to the center of the steering wheel horn pad, eyes on the woman",
+   "reuse_of": null
+  },
+  {
+   "id": "S08_D",
+   "scene": "S08",
+   "start": 363.202,
+   "end": 366.03,
+   "framing": "medium",
+   "camera": "locked",
+   "refs": [
+    "WOMAN"
+   ],
+   "prompt": "the woman's head turns toward camera, face still in deep shadow under wet hair, no features visible",
+   "reuse_of": null
+  },
+  {
+   "id": "S08_E",
+   "scene": "S08",
+   "start": 366.03,
+   "end": 371.66,
+   "framing": "wide across street",
+   "camera": "slow rack focus",
+   "refs": [],
+   "prompt": "a dim laundromat window with a still silhouette inside turning toward the street",
+   "reuse_of": null
+  },
+  {
+   "id": "S08_F",
+   "scene": "S08",
+   "start": 371.66,
+   "end": 383.129,
+   "framing": "wide",
+   "camera": "tracking with truck",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "a bus shelter with a dark standing figure, the truck passes in the foreground, the figure's head follows it",
+   "reuse_of": null
+  },
+  {
+   "id": "S09_A",
+   "scene": "S09",
+   "start": 383.129,
+   "end": 394.798,
+   "framing": "mirror insert",
+   "camera": "locked",
+   "refs": [
+    "WOMAN",
+    "TRUCK"
+   ],
+   "prompt": "in the side mirror the woman walks into the empty lane behind the truck, steady, small and distant",
+   "reuse_of": null
+  },
+  {
+   "id": "S09_B",
+   "scene": "S09",
+   "start": 394.798,
+   "end": 397.798,
+   "framing": "insert",
+   "camera": "locked",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "a finger pressing the truck radio power knob, dashboard amber light",
+   "reuse_of": null
+  },
+  {
+   "id": "S09_C",
+   "scene": "S09",
+   "start": 397.798,
+   "end": 403.683,
+   "framing": "close-up",
+   "camera": "slow push",
+   "refs": [
+    "DANIEL"
+   ],
+   "prompt": "Daniel's face thinking, red-and-white light flicker reflected faintly in his eyes as a memory",
+   "reuse_of": null
+  },
+  {
+   "id": "S09_D",
+   "scene": "S09",
+   "start": 403.683,
+   "end": 415.545,
+   "framing": "wide",
+   "camera": "slow tracking",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "two men under an apartment awning facing the brick wall, backs to the street, the truck passes slowly in the foreground",
+   "reuse_of": null
+  },
+  {
+   "id": "S09_E",
+   "scene": "S09",
+   "start": 415.545,
+   "end": 426.685,
+   "framing": "aerial wide",
+   "camera": "slow rise",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the lone truck on a dark grid of small-town streets, scattered still figures under streetlamps",
+   "reuse_of": null
+  },
+  {
+   "id": "S10_A",
+   "scene": "S10",
+   "start": 426.685,
+   "end": 437.63,
+   "framing": "through windshield",
+   "camera": "slow creep",
+   "refs": [
+    "VAN",
+    "TRUCK"
+   ],
+   "prompt": "a white health department van parked diagonally across an intersection lane, rear doors open, headlights washing over it",
+   "reuse_of": null
+  },
+  {
+   "id": "S10_B",
+   "scene": "S10",
+   "start": 437.63,
+   "end": 444.952,
+   "framing": "slow pan",
+   "camera": "pan across cargo",
+   "refs": [
+    "VAN"
+   ],
+   "prompt": "inside the van's cargo area: stacked face shields, sealed protective suits in plastic, a folding chair strapped to the wall, a cooler with a biohazard symbol",
+   "reuse_of": null
+  },
+  {
+   "id": "S10_C",
+   "scene": "S10",
+   "start": 444.952,
+   "end": 459.672,
+   "framing": "insert",
+   "camera": "slow push",
+   "refs": [
+    "VAN"
+   ],
+   "prompt": "a printed checklist sheet taped inside the open van door, BLANK paper (text added as overlay), headlight glare",
+   "reuse_of": null
+  },
+  {
+   "id": "S10_D",
+   "scene": "S10",
+   "start": 459.672,
+   "end": 471.112,
+   "framing": "insert",
+   "camera": "slow tilt down",
+   "refs": [
+    "VAN"
+   ],
+   "prompt": "a long contact sheet with ruled lines, a column of heavy black marker strokes beside the rows, BLANK paper (text as overlay)",
+   "reuse_of": null
+  },
+  {
+   "id": "S10_E",
+   "scene": "S10",
+   "start": 471.112,
+   "end": 476.258,
+   "framing": "close-up",
+   "camera": "locked",
+   "refs": [
+    "DANIEL"
+   ],
+   "prompt": "Daniel's eyes narrowing, a flicker of recognition, headlight bounce on his face",
+   "reuse_of": null
+  },
+  {
+   "id": "S11_A",
+   "scene": "S11",
+   "start": 476.258,
+   "end": 483.719,
+   "framing": "mirror insert",
+   "camera": "locked",
+   "refs": [
+    "TRUCK",
+    "VAN"
+   ],
+   "prompt": "right side mirror: the truck's box inches from the van's open door, tight gap",
+   "reuse_of": null
+  },
+  {
+   "id": "S11_B",
+   "scene": "S11",
+   "start": 483.719,
+   "end": 496.814,
+   "framing": "rear exterior",
+   "camera": "locked, slight shake",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the rear corner of the white cargo box snags a free-standing metal construction fence panel and drags it over, sparks of rain",
+   "reuse_of": null
+  },
+  {
+   "id": "S11_C",
+   "scene": "S11",
+   "start": 496.814,
+   "end": 505.015,
+   "framing": "wide up",
+   "camera": "slow tilt",
+   "refs": [],
+   "prompt": "a small-town pharmacy corner at night, a silhouette standing in a second-floor window, another dark figure behind the shop glass",
+   "reuse_of": null
+  },
+  {
+   "id": "S11_D",
+   "scene": "S11",
+   "start": 505.015,
+   "end": 509.738,
+   "framing": "medium",
+   "camera": "locked",
+   "refs": [
+    "VAN"
+   ],
+   "prompt": "inside the van, a pile of plastic-wrapped protective suits sags and shifts slightly, nothing visible beneath",
+   "reuse_of": null
+  },
+  {
+   "id": "S11_E",
+   "scene": "S11",
+   "start": 509.738,
+   "end": 519.944,
+   "framing": "front exterior low",
+   "camera": "truck rushes past camera",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the white box truck accelerating toward camera down the wet street, headlights flaring",
+   "reuse_of": null
+  },
+  {
+   "id": "S12_A",
+   "scene": "S12",
+   "start": 519.944,
+   "end": 526.615,
+   "framing": "far wide",
+   "camera": "slow push",
+   "refs": [
+    "CHECKPOINT"
+   ],
+   "prompt": "a floodlit temporary roadblock at the end of a dark residential street, light towers glaring through rain",
+   "reuse_of": null
+  },
+  {
+   "id": "S12_B",
+   "scene": "S12",
+   "start": 526.615,
+   "end": 538.003,
+   "framing": "medium wide",
+   "camera": "slow drift",
+   "refs": [
+    "CHECKPOINT",
+    "WORKER"
+   ],
+   "prompt": "concrete barriers, a lowered striped gate arm, a white utility van and dark SUV behind it, a figure in a white protective suit standing beside the gate, face too far to read",
+   "reuse_of": null
+  },
+  {
+   "id": "S12_C",
+   "scene": "S12",
+   "start": 538.003,
+   "end": 541.75,
+   "framing": "through windshield",
+   "camera": "locked",
+   "refs": [
+    "WORKER"
+   ],
+   "prompt": "the suited figure raises one arm, palm out, silhouetted against floodlights",
+   "reuse_of": null
+  },
+  {
+   "id": "S12_D",
+   "scene": "S12",
+   "start": 541.75,
+   "end": 553.085,
+   "framing": "close-up",
+   "camera": "locked",
+   "refs": [
+    "DANIEL"
+   ],
+   "prompt": "Daniel exhales, shoulders dropping, floodlight wash on his face, almost a smile",
+   "reuse_of": null
+  },
+  {
+   "id": "S12_E",
+   "scene": "S12",
+   "start": 553.085,
+   "end": 568.057,
+   "framing": "high wide",
+   "camera": "slow crane down",
+   "refs": [
+    "TRUCK",
+    "CHECKPOINT"
+   ],
+   "prompt": "the truck stopped on a wide gravel turnout before the barriers, a clear stretch of empty road behind it",
+   "reuse_of": null
+  },
+  {
+   "id": "S13_A",
+   "scene": "S13",
+   "start": 568.057,
+   "end": 577.439,
+   "framing": "exterior medium",
+   "camera": "locked",
+   "refs": [
+    "WORKER",
+    "TRUCK"
+   ],
+   "prompt": "the suited worker walks up to the truck's driver door in floodlight and rain, goggles and mask, hood down",
+   "reuse_of": null
+  },
+  {
+   "id": "S13_B",
+   "scene": "S13",
+   "start": 577.439,
+   "end": 583.659,
+   "framing": "through driver window",
+   "camera": "locked",
+   "refs": [
+    "WORKER",
+    "TRUCK"
+   ],
+   "prompt": "same as S00_B: gloved index finger pointing down at the closed window",
+   "reuse_of": "S00_B"
+  },
+  {
+   "id": "S13_C",
+   "scene": "S13",
+   "start": 583.659,
+   "end": 589.305,
+   "framing": "insert",
+   "camera": "slow push",
+   "refs": [
+    "DANIEL",
+    "TRUCK"
+   ],
+   "prompt": "Daniel's fingers moving toward the power window switch on the door armrest",
+   "reuse_of": null
+  },
+  {
+   "id": "S13_D",
+   "scene": "S13",
+   "start": 589.305,
+   "end": 599.626,
+   "framing": "extreme close-up",
+   "camera": "locked, rack focus",
+   "refs": [
+    "WORKER"
+   ],
+   "prompt": "the blue nitrile glove torn across the index finger, the finger bent sideways at the middle joint, no blood, no bone",
+   "reuse_of": null
+  },
+  {
+   "id": "S13_E",
+   "scene": "S13",
+   "start": 599.626,
+   "end": 610.281,
+   "framing": "two-shot through glass",
+   "camera": "locked",
+   "refs": [
+    "DANIEL",
+    "WORKER"
+   ],
+   "prompt": "Daniel points toward the gate, the worker's goggled eyes track his hand, then the gloved finger points down again",
+   "reuse_of": null
+  },
+  {
+   "id": "S13_F",
+   "scene": "S13",
+   "start": 610.281,
+   "end": 615.341,
+   "framing": "close-up",
+   "camera": "very slow push",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the window switch with Daniel's hand pulled away from it, rain light rippling across the door panel",
+   "reuse_of": null
+  },
+  {
+   "id": "S14_A",
+   "scene": "S14",
+   "start": 615.341,
+   "end": 629.421,
+   "framing": "close-up through glass",
+   "camera": "slow push",
+   "refs": [
+    "WORKER"
+   ],
+   "prompt": "REVEAL: the worker's mask with a dark stain spreading from its center, thin dark branching lines on his neck above the coverall collar",
+   "reuse_of": null
+  },
+  {
+   "id": "S14_B",
+   "scene": "S14",
+   "start": 629.421,
+   "end": 639.707,
+   "framing": "extreme close-up",
+   "camera": "locked",
+   "refs": [
+    "WORKER"
+   ],
+   "prompt": "clouded milky eyes behind clear goggles, not glowing, pupils barely visible, tracking slowly to one side",
+   "reuse_of": null
+  },
+  {
+   "id": "S14_C",
+   "scene": "S14",
+   "start": 639.707,
+   "end": 647.039,
+   "framing": "insert",
+   "camera": "locked",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the phone in the dash mount lights up bright white in the dark cab (caller UI added as overlay)",
+   "reuse_of": null
+  },
+  {
+   "id": "S14_D",
+   "scene": "S14",
+   "start": 647.039,
+   "end": 657.061,
+   "framing": "exterior close",
+   "camera": "locked, door shakes",
+   "refs": [
+    "WORKER",
+    "TRUCK"
+   ],
+   "prompt": "the worker's head jerks toward the cab, his torn-gloved hand yanks the outside door handle, the door rattles",
+   "reuse_of": null
+  },
+  {
+   "id": "S14_E",
+   "scene": "S14",
+   "start": 657.061,
+   "end": 660.276,
+   "framing": "insert",
+   "camera": "locked",
+   "refs": [
+    "DANIEL",
+    "TRUCK"
+   ],
+   "prompt": "Daniel's thumb jabs the phone screen, the light dies",
+   "reuse_of": null
+  },
+  {
+   "id": "S14_F",
+   "scene": "S14",
+   "start": 660.276,
+   "end": 664.906,
+   "framing": "rack focus past worker",
+   "camera": "focus pull",
+   "refs": [
+    "CHECKPOINT"
+   ],
+   "prompt": "focus shifts past the worker's shoulder to the van and SUV behind the gate, all their doors standing open, interiors dark",
+   "reuse_of": null
+  },
+  {
+   "id": "S15_A",
+   "scene": "S15",
+   "start": 664.906,
+   "end": 678.477,
+   "framing": "slow pan",
+   "camera": "pan across checkpoint",
+   "refs": [
+    "CHECKPOINT"
+   ],
+   "prompt": "an abandoned folding table with scattered papers and a tipped chair under floodlights, empty SUV, a white protective suit crumpled against a concrete barrier",
+   "reuse_of": null
+  },
+  {
+   "id": "S15_B",
+   "scene": "S15",
+   "start": 678.477,
+   "end": 680.74,
+   "framing": "insert",
+   "camera": "locked",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "Daniel's hand pulls the column gear shifter into reverse, dashboard amber",
+   "reuse_of": null
+  },
+  {
+   "id": "S15_C",
+   "scene": "S15",
+   "start": 680.74,
+   "end": 690.293,
+   "framing": "rear exterior",
+   "camera": "locked",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the rear of the white box truck, white reverse lights snapping on, rain in the beams",
+   "reuse_of": null
+  },
+  {
+   "id": "S15_D",
+   "scene": "S15",
+   "start": 690.293,
+   "end": 698.928,
+   "framing": "medium",
+   "camera": "locked",
+   "refs": [
+    "CHECKPOINT"
+   ],
+   "prompt": "behind the barrier, a gloved hand grips the top of the concrete, a hooded head rises slowly into the floodlight",
+   "reuse_of": null
+  },
+  {
+   "id": "S15_E",
+   "scene": "S15",
+   "start": 698.928,
+   "end": 705.208,
+   "framing": "medium",
+   "camera": "slow push",
+   "refs": [
+    "CHECKPOINT"
+   ],
+   "prompt": "inside the open utility van a figure in a white suit sits upright, face in shadow, turned toward camera",
+   "reuse_of": null
+  },
+  {
+   "id": "S15_F",
+   "scene": "S15",
+   "start": 705.208,
+   "end": 707.796,
+   "framing": "low exterior",
+   "camera": "locked",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the truck's rear tires spin on wet gravel, the truck starts rolling backward",
+   "reuse_of": null
+  },
+  {
+   "id": "S16_A",
+   "scene": "S16",
+   "start": 707.796,
+   "end": 716.669,
+   "framing": "from inside cab",
+   "camera": "handheld, moving",
+   "refs": [
+    "WORKER",
+    "TRUCK"
+   ],
+   "prompt": "through the driver window the worker walks alongside the reversing truck, then lunges, blurred with speed",
+   "reuse_of": null
+  },
+  {
+   "id": "S16_B",
+   "scene": "S16",
+   "start": 716.669,
+   "end": 720.172,
+   "framing": "close-up",
+   "camera": "impact shake",
+   "refs": [
+    "WORKER",
+    "DANIEL"
+   ],
+   "prompt": "a gloved palm slams flat against the driver window inches from Daniel's face, water spraying off the glass",
+   "reuse_of": null
+  },
+  {
+   "id": "S16_C",
+   "scene": "S16",
+   "start": 720.172,
+   "end": 728.829,
+   "framing": "close-up through glass",
+   "camera": "locked",
+   "refs": [
+    "WORKER"
+   ],
+   "prompt": "the mask slipped below his chin, jaw hanging crooked, neck skin stretched with dark branching lines, mouth open but silent, no teeth gore",
+   "reuse_of": null
+  },
+  {
+   "id": "S16_D",
+   "scene": "S16",
+   "start": 728.829,
+   "end": 735.942,
+   "framing": "mirror insert",
+   "camera": "shaking",
+   "refs": [
+    "TRUCK",
+    "CHECKPOINT"
+   ],
+   "prompt": "the side mirror vibrating on its arm, in it two white-suited figures rounding the concrete barrier",
+   "reuse_of": null
+  },
+  {
+   "id": "S16_E",
+   "scene": "S16",
+   "start": 735.942,
+   "end": 741.113,
+   "framing": "extreme close-up",
+   "camera": "impact shake",
+   "refs": [
+    "WORKER"
+   ],
+   "prompt": "third palm strike on the glass, the glass does not crack",
+   "reuse_of": null
+  },
+  {
+   "id": "S16_F",
+   "scene": "S16",
+   "start": 741.113,
+   "end": 747.213,
+   "framing": "close-up on top edge of window",
+   "camera": "locked",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the top edge of the driver window glass jolts down in its frame, leaving a one-inch dark gap at the top",
+   "reuse_of": null
+  },
+  {
+   "id": "S16_G",
+   "scene": "S16",
+   "start": 747.213,
+   "end": 754.582,
+   "framing": "extreme close-up",
+   "camera": "very slow push",
+   "refs": [
+    "WORKER",
+    "TRUCK"
+   ],
+   "prompt": "four blue-gloved fingertips curl over the top edge of the lowered glass from outside, rain blowing through the gap",
+   "reuse_of": null
+  },
+  {
+   "id": "S17_A",
+   "scene": "S17",
+   "start": 754.582,
+   "end": 769.29,
+   "framing": "high wide",
+   "camera": "crane follow",
+   "refs": [
+    "TRUCK",
+    "CHECKPOINT"
+   ],
+   "prompt": "the white box truck swinging around on a gravel turnout in a tight turn, three white-suited figures in the floodlights behind it",
+   "reuse_of": null
+  },
+  {
+   "id": "S17_B",
+   "scene": "S17",
+   "start": 769.29,
+   "end": 778.058,
+   "framing": "insert",
+   "camera": "locked",
+   "refs": [
+    "DANIEL",
+    "TRUCK"
+   ],
+   "prompt": "Daniel's finger holding the window switch up, the glass not moving, a one-inch black gap at the top of the window, rain dripping in",
+   "reuse_of": null
+  },
+  {
+   "id": "S17_C",
+   "scene": "S17",
+   "start": 778.058,
+   "end": 791.875,
+   "framing": "headlight sweep",
+   "camera": "pan with headlight beam",
+   "refs": [
+    "CHECKPOINT"
+   ],
+   "prompt": "headlight beam sweeps across a temporary road sign on steel legs at the back of the checkpoint, lamp on top, white panel BLANK (text overlay)",
+   "reuse_of": null
+  },
+  {
+   "id": "S17_D",
+   "scene": "S17",
+   "start": 791.875,
+   "end": 795.565,
+   "framing": "close-up",
+   "camera": "slow push",
+   "refs": [],
+   "prompt": "the clean printed white panel, perfectly blank, rain running down it (printed text overlay)",
+   "reuse_of": null
+  },
+  {
+   "id": "S17_E",
+   "scene": "S17",
+   "start": 795.565,
+   "end": 809.54,
+   "framing": "match cut",
+   "camera": "slow push",
+   "refs": [],
+   "prompt": "match cut to the marker-scrawled panel from S02, then to the NO RESPONSE column from S10",
+   "reuse_of": "S02_B"
+  },
+  {
+   "id": "S17_F",
+   "scene": "S17",
+   "start": 809.54,
+   "end": 818.732,
+   "framing": "close-up",
+   "camera": "locked",
+   "refs": [
+    "DANIEL"
+   ],
+   "prompt": "Daniel's face lit by the dashboard, rain blowing in through the gap onto his collar, realization, no panic",
+   "reuse_of": null
+  },
+  {
+   "id": "S17_G",
+   "scene": "S17",
+   "start": 818.732,
+   "end": 826.249,
+   "framing": "insert",
+   "camera": "locked",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the phone navigation screen glowing (overlay), beyond it through the windshield the lit main street of Bellwether ahead",
+   "reuse_of": null
+  },
+  {
+   "id": "S17_H",
+   "scene": "S17",
+   "start": 826.249,
+   "end": 830.249,
+   "framing": "aerial wide",
+   "camera": "slow rise, fade to black over last 2 s",
+   "refs": [
+    "TRUCK"
+   ],
+   "prompt": "the lone truck driving back into the dark small town, tiny figures standing under streetlamps along the road",
+   "reuse_of": null
+  }
+ ],
+ "vo": [
+  {
+   "id": "S00_01",
+   "text": "There is a gesture every truck driver in America knows.",
+   "start": 0.0,
+   "dur": 3.436
+  },
+  {
+   "id": "S00_02",
+   "text": "A hand raised beside the cab. Then one finger, pointing down.",
+   "start": 3.886,
+   "dur": 3.979
+  },
+  {
+   "id": "S00_03",
+   "text": "Lower your window.",
+   "start": 8.315,
+   "dur": 1.329
+  },
+  {
+   "id": "S00_04",
+   "text": "Daniel Reed had answered that gesture at weigh stations, toll plazas and loading docks for eleven years.",
+   "start": 10.544,
+   "dur": 6.058
+  },
+  {
+   "id": "S00_05",
+   "text": "It had never cost him more than a few seconds.",
+   "start": 17.052,
+   "dur": 2.664
+  },
+  {
+   "id": "S00_06",
+   "text": "At two forty-one in the morning, at the eastern edge of Bellwether, Pennsylvania, a man in a protective suit made that gesture again.",
+   "start": 20.166,
+   "dur": 7.398
+  },
+  {
+   "id": "S00_07",
+   "text": "And for the first time in his life, Daniel kept his hand on the wheel.",
+   "start": 28.014,
+   "dur": 3.682
+  },
+  {
+   "id": "S01_01",
+   "text": "Forty minutes earlier, the night had been ordinary.",
+   "start": 35.496,
+   "dur": 2.83
+  },
+  {
+   "id": "S01_02",
+   "text": "Daniel had a twenty-six-foot box truck full of groceries, a delivery window that closed at five, and a dispatcher who only called when something went wrong.",
+   "start": 38.776,
+   "dur": 8.771
+  },
+  {
+   "id": "S01_03",
+   "text": "A jackknifed tractor-trailer had shut down the interstate, so the routing app sent him off the highway and through Bellwether, a town he had never had a reason to see.",
+   "start": 47.997,
+   "dur": 8.622
+  },
+  {
+   "id": "S01_04",
+   "text": "The detour added nineteen minutes. Nothing more.",
+   "start": 57.069,
+   "dur": 2.819
+  },
+  {
+   "id": "S01_05",
+   "text": "The radio played low. The wipers kept time with it.",
+   "start": 60.338,
+   "dur": 3.144
+  },
+  {
+   "id": "S01_06",
+   "text": "He had driven through smaller towns. He had driven through worse weather.",
+   "start": 63.932,
+   "dur": 3.824
+  },
+  {
+   "id": "S01_07",
+   "text": "Nothing on the screen beside the wheel suggested anything ahead of him but a two-lane road, a few closed businesses, and the long dark stretch back to the interstate.",
+   "start": 68.206,
+   "dur": 8.774
+  },
+  {
+   "id": "S02_01",
+   "text": "The sign stood just past the town limit.",
+   "start": 77.78,
+   "dur": 2.624
+  },
+  {
+   "id": "S02_02",
+   "text": "Temporary steel legs. A portable lamp clamped to the top. A white panel, the kind road crews use for lane closures.",
+   "start": 80.854,
+   "dur": 6.941
+  },
+  {
+   "id": "S02_03",
+   "text": "Someone had blacked out the printed message and written over it in thick marker, the letters large and uneven, pressed hard enough to tear the surface.",
+   "start": 88.245,
+   "dur": 7.934
+  },
+  {
+   "id": "S02_04",
+   "text": "Keep vehicle windows closed.",
+   "start": 96.629,
+   "dur": 2.006
+  },
+  {
+   "id": "S02_05",
+   "text": "Daniel glanced at the window beside him. Already closed.",
+   "start": 99.535,
+   "dur": 3.364
+  },
+  {
+   "id": "S02_06",
+   "text": "Beyond the trees, the lights of a processing plant glowed in the mist. A chemical leak, he decided. A road crew with no time to print a proper sign.",
+   "start": 103.349,
+   "dur": 8.433
+  },
+  {
+   "id": "S02_07",
+   "text": "That was the first explanation of the night.",
+   "start": 112.232,
+   "dur": 2.364
+  },
+  {
+   "id": "S02_08",
+   "text": "It lasted about a minute.",
+   "start": 115.046,
+   "dur": 1.659
+  },
+  {
+   "id": "S02_09",
+   "text": "An ambulance came toward him in the other lane, emergency lights turning.",
+   "start": 117.155,
+   "dur": 4.194
+  },
+  {
+   "id": "S02_10",
+   "text": "Its siren was off.",
+   "start": 121.799,
+   "dur": 1.346
+  },
+  {
+   "id": "S03_01",
+   "text": "Bellwether Fuel was the only lit building on Main Street.",
+   "start": 125.745,
+   "dur": 3.533
+  },
+  {
+   "id": "S03_02",
+   "text": "Four pumps under a red-and-white canopy. A convenience store with every light on. A blue sedan at the nearest pump.",
+   "start": 129.729,
+   "dur": 6.736
+  },
+  {
+   "id": "S03_03",
+   "text": "Daniel pulled in for coffee. Out of habit, he parked at the edge of the lot, nose toward the exit.",
+   "start": 136.915,
+   "dur": 5.302
+  },
+  {
+   "id": "S03_04",
+   "text": "The sedan's driver door stood open. The window was rolled all the way down, and the seat was dark with rain.",
+   "start": 142.666,
+   "dur": 6.424
+  },
+  {
+   "id": "S03_05",
+   "text": "The keys were still in the ignition. That was why the chime kept sounding. A soft, patient tone, repeating every second, for no one.",
+   "start": 149.54,
+   "dur": 7.642
+  },
+  {
+   "id": "S03_06",
+   "text": "He waited for the driver to come back out of the store.",
+   "start": 157.632,
+   "dur": 2.923
+  },
+  {
+   "id": "S03_07",
+   "text": "Nobody did.",
+   "start": 161.005,
+   "dur": 1.207
+  },
+  {
+   "id": "S03_08",
+   "text": "The driver was in the restroom, he told himself. It was a reasonable explanation.",
+   "start": 162.662,
+   "dur": 4.95
+  },
+  {
+   "id": "S03_09",
+   "text": "He would stop using that word soon.",
+   "start": 168.061,
+   "dur": 2.256
+  },
+  {
+   "id": "S04_01",
+   "text": "Inside, the store smelled of burnt coffee and floor cleaner.",
+   "start": 171.118,
+   "dur": 3.587
+  },
+  {
+   "id": "S04_02",
+   "text": "A paper cup sat under the dispenser. Coffee had overflowed and was still dripping into the tray, which meant the machine had been started minutes ago, not hours.",
+   "start": 175.154,
+   "dur": 8.898
+  },
+  {
+   "id": "S04_03",
+   "text": "A carton of canned soup sat in the aisle, half unpacked.",
+   "start": 184.502,
+   "dur": 3.309
+  },
+  {
+   "id": "S04_04",
+   "text": "Behind the register, a phone lit up, buzzed against the counter, and went dark.",
+   "start": 188.261,
+   "dur": 4.341
+  },
+  {
+   "id": "S04_05",
+   "text": "Daniel looked toward the stockroom door.",
+   "start": 193.052,
+   "dur": 2.272
+  },
+  {
+   "id": "S04_06",
+   "text": "Something touched the other side of it.",
+   "start": 195.774,
+   "dur": 2.216
+  },
+  {
+   "id": "S04_07",
+   "text": "Not a knock.",
+   "start": 198.44,
+   "dur": 0.92
+  },
+  {
+   "id": "S04_08",
+   "text": "A slow scrape, at the height of a man's shoulder. Then the soft pressure of weight settling against the wood.",
+   "start": 200.061,
+   "dur": 5.859
+  },
+  {
+   "id": "S05_01",
+   "text": "Under the door, in the strip of light from the stockroom, he could see the shadows of two feet. Standing close. Not moving.",
+   "start": 206.82,
+   "dur": 6.539
+  },
+  {
+   "id": "S05_02",
+   "text": "Daniel took one step back.",
+   "start": 213.809,
+   "dur": 1.787
+  },
+  {
+   "id": "S05_03",
+   "text": "His heel hit the soup carton. A can rolled across the floor and stopped against the counter.",
+   "start": 216.046,
+   "dur": 5.156
+  },
+  {
+   "id": "S05_04",
+   "text": "The scrape stopped.",
+   "start": 221.652,
+   "dur": 1.241
+  },
+  {
+   "id": "S05_05",
+   "text": "Then the handle began to turn. Slowly, all the way to the end of its travel.",
+   "start": 223.793,
+   "dur": 4.494
+  },
+  {
+   "id": "S05_06",
+   "text": "Whoever stood behind it kept turning, as if the handle might give a little more.",
+   "start": 228.737,
+   "dur": 4.371
+  },
+  {
+   "id": "S05_07",
+   "text": "Daniel left without the coffee.",
+   "start": 233.559,
+   "dur": 2.089
+  },
+  {
+   "id": "S05_08",
+   "text": "In the cab, he locked both doors before he started the engine.",
+   "start": 236.097,
+   "dur": 3.578
+  },
+  {
+   "id": "S05_09",
+   "text": "In his mirror, the store entrance swung open.",
+   "start": 240.125,
+   "dur": 2.603
+  },
+  {
+   "id": "S05_10",
+   "text": "He turned onto the road before he could see who walked out.",
+   "start": 243.178,
+   "dur": 2.977
+  },
+  {
+   "id": "S05_11",
+   "text": "Rule one. A lit building is not an open building.",
+   "start": 246.855,
+   "dur": 3.083
+  },
+  {
+   "id": "S06_01",
+   "text": "Half a mile on, three cars narrowed Main Street to a single lane.",
+   "start": 250.938,
+   "dur": 3.938
+  },
+  {
+   "id": "S06_02",
+   "text": "There was no wreck.",
+   "start": 255.326,
+   "dur": 1.193
+  },
+  {
+   "id": "S06_03",
+   "text": "No broken glass. No airbags. No steam rising from a radiator.",
+   "start": 256.969,
+   "dur": 4.355
+  },
+  {
+   "id": "S06_04",
+   "text": "One car had rolled to a stop with its front wheels against the curb. Another stood across the center line, its engine still running.",
+   "start": 261.774,
+   "dur": 7.595
+  },
+  {
+   "id": "S06_05",
+   "text": "A grocery bag had spilled oranges into the gutter.",
+   "start": 269.819,
+   "dur": 3.178
+  },
+  {
+   "id": "S06_06",
+   "text": "Daniel eased between them at walking speed, and that was when he noticed what the three cars had in common.",
+   "start": 273.446,
+   "dur": 5.945
+  },
+  {
+   "id": "S06_07",
+   "text": "Every driver's window was rolled all the way down.",
+   "start": 279.842,
+   "dur": 3.189
+  },
+  {
+   "id": "S06_08",
+   "text": "In the last car, a child's rain jacket hung from the open rear door. He searched the sidewalks for a family.",
+   "start": 283.931,
+   "dur": 6.309
+  },
+  {
+   "id": "S06_09",
+   "text": "There was nobody to flag him down. Nobody asking for help.",
+   "start": 290.689,
+   "dur": 3.567
+  },
+  {
+   "id": "S06_10",
+   "text": "Rule two. When nothing is broken, ask why everyone left.",
+   "start": 294.707,
+   "dur": 3.65
+  },
+  {
+   "id": "S07_01",
+   "text": "He called his dispatcher.",
+   "start": 299.357,
+   "dur": 1.751
+  },
+  {
+   "id": "S07_02",
+   "text": "The call connected, then dropped before he heard a voice.",
+   "start": 301.557,
+   "dur": 3.079
+  },
+  {
+   "id": "S07_03",
+   "text": "The second attempt didn't connect at all. One bar of signal. Then none.",
+   "start": 305.087,
+   "dur": 4.178
+  },
+  {
+   "id": "S07_04",
+   "text": "The route screen still showed the same calm blue line. Three point eight miles to the eastern edge of town, then open highway.",
+   "start": 309.715,
+   "dur": 6.901
+  },
+  {
+   "id": "S07_05",
+   "text": "He thought about turning around.",
+   "start": 317.066,
+   "dur": 1.93
+  },
+  {
+   "id": "S07_06",
+   "text": "Behind him were the empty cars, the gas station, and whatever had been standing behind that door.",
+   "start": 319.446,
+   "dur": 5.326
+  },
+  {
+   "id": "S07_07",
+   "text": "Ahead, Main Street ran straight and lit, with working traffic signals and nothing in the road.",
+   "start": 325.222,
+   "dur": 5.111
+  },
+  {
+   "id": "S07_08",
+   "text": "Daniel kept going.",
+   "start": 330.783,
+   "dur": 1.487
+  },
+  {
+   "id": "S07_09",
+   "text": "It wasn't courage.",
+   "start": 332.72,
+   "dur": 1.372
+  },
+  {
+   "id": "S07_10",
+   "text": "It was the oldest mistake people make in an emergency. Choosing the direction where nothing bad has happened yet.",
+   "start": 334.542,
+   "dur": 6.29
+  },
+  {
+   "id": "S08_01",
+   "text": "The woman was standing at a crosswalk.",
+   "start": 341.832,
+   "dur": 2.259
+  },
+  {
+   "id": "S08_02",
+   "text": "No umbrella. No coat. A pale sweater gone dark with rain, and her arms hanging straight at her sides.",
+   "start": 344.541,
+   "dur": 5.891
+  },
+  {
+   "id": "S08_03",
+   "text": "The walk signal in front of her was lit. She didn't walk.",
+   "start": 350.881,
+   "dur": 2.997
+  },
+  {
+   "id": "S08_04",
+   "text": "Daniel slowed, expecting her to step out in front of him. She didn't move.",
+   "start": 354.328,
+   "dur": 4.136
+  },
+  {
+   "id": "S08_05",
+   "text": "He waited three seconds.",
+   "start": 358.915,
+   "dur": 1.881
+  },
+  {
+   "id": "S08_06",
+   "text": "Then he tapped the horn.",
+   "start": 361.246,
+   "dur": 1.506
+  },
+  {
+   "id": "S08_07",
+   "text": "Her head turned toward the cab.",
+   "start": 363.202,
+   "dur": 1.928
+  },
+  {
+   "id": "S08_08",
+   "text": "At the same instant, behind the window of a laundromat across the street, someone else turned.",
+   "start": 366.03,
+   "dur": 5.18
+  },
+  {
+   "id": "S08_09",
+   "text": "So did a figure under the bus shelter. A figure Daniel had looked straight at and taken for a shadow.",
+   "start": 371.66,
+   "dur": 5.641
+  },
+  {
+   "id": "S08_10",
+   "text": "None of them raised a hand.",
+   "start": 377.752,
+   "dur": 1.883
+  },
+  {
+   "id": "S08_11",
+   "text": "All three watched the truck go by.",
+   "start": 380.085,
+   "dur": 2.244
+  },
+  {
+   "id": "S09_01",
+   "text": "In the mirror, the woman stepped off the curb.",
+   "start": 383.129,
+   "dur": 2.433
+  },
+  {
+   "id": "S09_02",
+   "text": "She didn't cross. She walked into the lane the truck had just left, and followed it.",
+   "start": 386.012,
+   "dur": 4.059
+  },
+  {
+   "id": "S09_03",
+   "text": "Not running. Just walking, steadily, in the direction of the sound.",
+   "start": 390.522,
+   "dur": 3.827
+  },
+  {
+   "id": "S09_04",
+   "text": "Daniel reached over and turned off the radio.",
+   "start": 394.798,
+   "dur": 2.549
+  },
+  {
+   "id": "S09_05",
+   "text": "He thought of the ambulance. Lights, but no siren. Somebody in this town had already learned something.",
+   "start": 397.798,
+   "dur": 5.435
+  },
+  {
+   "id": "S09_06",
+   "text": "At the next corner, two men stood under an apartment awning, both facing the wall.",
+   "start": 403.683,
+   "dur": 4.454
+  },
+  {
+   "id": "S09_07",
+   "text": "He rolled past them with his foot barely on the pedal. No horn. No radio.",
+   "start": 408.587,
+   "dur": 4.548
+  },
+  {
+   "id": "S09_08",
+   "text": "Neither man turned.",
+   "start": 413.585,
+   "dur": 1.511
+  },
+  {
+   "id": "S09_09",
+   "text": "Daniel did not have a word for what was wrong with these people. But he understood the pattern well enough to obey it.",
+   "start": 415.545,
+   "dur": 5.881
+  },
+  {
+   "id": "S09_10",
+   "text": "Rule three. In a silent town, every sound is an announcement.",
+   "start": 421.877,
+   "dur": 3.809
+  },
+  {
+   "id": "S10_01",
+   "text": "At Main and Mill Street, a county health department van sat at an angle across one lane.",
+   "start": 426.685,
+   "dur": 5.376
+  },
+  {
+   "id": "S10_02",
+   "text": "Its rear doors were open.",
+   "start": 432.511,
+   "dur": 1.862
+  },
+  {
+   "id": "S10_03",
+   "text": "Daniel slowed almost to a stop.",
+   "start": 434.823,
+   "dur": 2.357
+  },
+  {
+   "id": "S10_04",
+   "text": "Inside, boxed face shields. Unopened protective suits. A folding chair. A cooler with a biohazard sticker.",
+   "start": 437.63,
+   "dur": 6.872
+  },
+  {
+   "id": "S10_05",
+   "text": "Taped to the inside of the rear door, in the full glare of his headlights, was a printed checklist. He could read the heading from the cab.",
+   "start": 444.952,
+   "dur": 7.35
+  },
+  {
+   "id": "S10_06",
+   "text": "Vehicle screening.",
+   "start": 452.752,
+   "dur": 1.388
+  },
+  {
+   "id": "S10_07",
+   "text": "Below it, three steps. Driver window down. Temperature check. Destination.",
+   "start": 454.84,
+   "dur": 4.382
+  },
+  {
+   "id": "S10_08",
+   "text": "Beside the checklist hung a contact sheet. A long column of addresses.",
+   "start": 459.672,
+   "dur": 4.292
+  },
+  {
+   "id": "S10_09",
+   "text": "And next to nearly every one, the same two words in thick black marker.",
+   "start": 464.415,
+   "dur": 4.056
+  },
+  {
+   "id": "S10_10",
+   "text": "No response.",
+   "start": 468.921,
+   "dur": 1.292
+  },
+  {
+   "id": "S10_11",
+   "text": "The handwriting looked familiar. Daniel couldn't place it.",
+   "start": 471.112,
+   "dur": 3.108
+  },
+  {
+   "id": "S10_12",
+   "text": "Not yet.",
+   "start": 474.67,
+   "dur": 0.788
+  },
+  {
+   "id": "S11_01",
+   "text": "There was room to pass. Barely.",
+   "start": 476.258,
+   "dur": 2.119
+  },
+  {
+   "id": "S11_02",
+   "text": "Daniel brought the truck within a foot of the van, watching the gap in his right mirror.",
+   "start": 478.827,
+   "dur": 4.442
+  },
+  {
+   "id": "S11_03",
+   "text": "He never saw the loose panel of construction fencing on the left.",
+   "start": 483.719,
+   "dur": 3.627
+  },
+  {
+   "id": "S11_04",
+   "text": "The rear corner of the box caught it.",
+   "start": 487.796,
+   "dur": 2.132
+  },
+  {
+   "id": "S11_05",
+   "text": "Steel dragged across steel, and then the whole panel went down in the street with a long, ringing crash.",
+   "start": 490.228,
+   "dur": 5.586
+  },
+  {
+   "id": "S11_06",
+   "text": "In a second-floor window above the pharmacy, a silhouette rose into view.",
+   "start": 496.814,
+   "dur": 4.468
+  },
+  {
+   "id": "S11_07",
+   "text": "Then another, behind the pharmacy's dark glass.",
+   "start": 501.732,
+   "dur": 2.833
+  },
+  {
+   "id": "S11_08",
+   "text": "Inside the open van, something under the pile of protective suits shifted.",
+   "start": 505.015,
+   "dur": 4.274
+  },
+  {
+   "id": "S11_09",
+   "text": "Daniel didn't look back.",
+   "start": 509.738,
+   "dur": 1.541
+  },
+  {
+   "id": "S11_10",
+   "text": "He straightened the wheel and pushed the pedal down, and for the first time that night, he stopped caring whether the groceries arrived in one piece.",
+   "start": 511.729,
+   "dur": 7.415
+  },
+  {
+   "id": "S12_01",
+   "text": "The eastern exit appeared beyond a row of dark houses.",
+   "start": 519.944,
+   "dur": 3.475
+  },
+  {
+   "id": "S12_02",
+   "text": "Two light towers turned the road white.",
+   "start": 523.869,
+   "dur": 2.296
+  },
+  {
+   "id": "S12_03",
+   "text": "Concrete barriers funneled both lanes into one. Behind a lowered gate stood a white utility van and a dark SUV.",
+   "start": 526.615,
+   "dur": 7.373
+  },
+  {
+   "id": "S12_04",
+   "text": "And beside the gate, a man in a white protective suit.",
+   "start": 534.438,
+   "dur": 3.114
+  },
+  {
+   "id": "S12_05",
+   "text": "He raised one arm.",
+   "start": 538.003,
+   "dur": 1.522
+  },
+  {
+   "id": "S12_06",
+   "text": "Stop.",
+   "start": 540.124,
+   "dur": 0.726
+  },
+  {
+   "id": "S12_07",
+   "text": "Daniel felt his chest loosen for the first time since the gas station.",
+   "start": 541.75,
+   "dur": 3.862
+  },
+  {
+   "id": "S12_08",
+   "text": "Someone was still working. Someone in this town still had a job, and a procedure, and a reason to be standing in the rain.",
+   "start": 546.062,
+   "dur": 6.573
+  },
+  {
+   "id": "S12_09",
+   "text": "Four tenths of a mile to open highway, on the other side of that gate.",
+   "start": 553.085,
+   "dur": 3.916
+  },
+  {
+   "id": "S12_10",
+   "text": "He stopped on the gravel turnout, well short of the barrier, and left the engine running.",
+   "start": 557.452,
+   "dur": 4.431
+  },
+  {
+   "id": "S12_11",
+   "text": "He even left himself room to back up. Not because he expected to need it. Habit.",
+   "start": 562.332,
+   "dur": 4.924
+  },
+  {
+   "id": "S13_01",
+   "text": "The man walked to the driver's side and stopped beside the door.",
+   "start": 568.057,
+   "dur": 3.419
+  },
+  {
+   "id": "S13_02",
+   "text": "White coveralls. Clear goggles. A white mask pulled tight across his mouth and nose.",
+   "start": 571.926,
+   "dur": 5.064
+  },
+  {
+   "id": "S13_03",
+   "text": "He lifted his hand and pointed down at the window.",
+   "start": 577.439,
+   "dur": 2.778
+  },
+  {
+   "id": "S13_04",
+   "text": "Driver window down. Step one.",
+   "start": 581.017,
+   "dur": 2.192
+  },
+  {
+   "id": "S13_05",
+   "text": "Daniel's hand was already moving toward the switch. Eleven years of habit moved it for him.",
+   "start": 583.659,
+   "dur": 5.196
+  },
+  {
+   "id": "S13_06",
+   "text": "Then he saw the glove.",
+   "start": 589.305,
+   "dur": 1.404
+  },
+  {
+   "id": "S13_07",
+   "text": "The left index finger had torn through the blue nitrile. Under it, the finger bent sideways at the middle joint, and the man didn't seem to know.",
+   "start": 591.409,
+   "dur": 7.767
+  },
+  {
+   "id": "S13_08",
+   "text": "Daniel took his hand off the switch. He pointed at the gate instead.",
+   "start": 599.626,
+   "dur": 3.786
+  },
+  {
+   "id": "S13_09",
+   "text": "The man's eyes followed his hand.",
+   "start": 603.862,
+   "dur": 2.168
+  },
+  {
+   "id": "S13_10",
+   "text": "Then, patiently, he pointed down at the window again.",
+   "start": 606.48,
+   "dur": 2.901
+  },
+  {
+   "id": "S13_11",
+   "text": "Rule four. An instruction is only as safe as the person giving it.",
+   "start": 610.281,
+   "dur": 4.06
+  },
+  {
+   "id": "S14_01",
+   "text": "Up close, the mask wasn't wet from the rain.",
+   "start": 615.341,
+   "dur": 2.609
+  },
+  {
+   "id": "S14_02",
+   "text": "A dark stain had spread outward from the center of it. From the inside.",
+   "start": 618.4,
+   "dur": 4.219
+  },
+  {
+   "id": "S14_03",
+   "text": "Above the collar of the suit, thin dark lines branched across the skin of his neck, like cracks under ice.",
+   "start": 623.069,
+   "dur": 5.902
+  },
+  {
+   "id": "S14_04",
+   "text": "And his eyes were wrong. Not glowing. Not red. Just clouded, like a window someone had breathed on.",
+   "start": 629.421,
+   "dur": 5.493
+  },
+  {
+   "id": "S14_05",
+   "text": "They weren't looking at Daniel's face. They were following his hands.",
+   "start": 635.364,
+   "dur": 3.443
+  },
+  {
+   "id": "S14_06",
+   "text": "Then the phone in the dash mount lit up and began to ring.",
+   "start": 639.707,
+   "dur": 3.231
+  },
+  {
+   "id": "S14_07",
+   "text": "Twenty-four minutes late, his dispatcher was calling back.",
+   "start": 643.438,
+   "dur": 3.151
+  },
+  {
+   "id": "S14_08",
+   "text": "The man's head snapped toward the sound.",
+   "start": 647.039,
+   "dur": 2.373
+  },
+  {
+   "id": "S14_09",
+   "text": "His hand dropped to the door handle. He pulled once. Waited. Pulled again, harder, until the whole door shook in its frame.",
+   "start": 649.862,
+   "dur": 6.749
+  },
+  {
+   "id": "S14_10",
+   "text": "Daniel killed the ringer. It was already too late.",
+   "start": 657.061,
+   "dur": 2.764
+  },
+  {
+   "id": "S14_11",
+   "text": "Behind the gate, every door of the van and the SUV stood open.",
+   "start": 660.276,
+   "dur": 3.831
+  },
+  {
+   "id": "S15_01",
+   "text": "There was no one at the folding table under the lights.",
+   "start": 664.906,
+   "dur": 2.951
+  },
+  {
+   "id": "S15_02",
+   "text": "No one behind the wheel of the SUV.",
+   "start": 668.307,
+   "dur": 2.632
+  },
+  {
+   "id": "S15_03",
+   "text": "A second protective suit lay crumpled against the concrete barrier. Daniel had taken it for a pile of supplies.",
+   "start": 671.389,
+   "dur": 6.638
+  },
+  {
+   "id": "S15_04",
+   "text": "He shifted into reverse.",
+   "start": 678.477,
+   "dur": 1.813
+  },
+  {
+   "id": "S15_05",
+   "text": "And the truck did what fleet trucks are built to do.",
+   "start": 680.74,
+   "dur": 2.855
+  },
+  {
+   "id": "S15_06",
+   "text": "It began to beep.",
+   "start": 684.045,
+   "dur": 1.459
+  },
+  {
+   "id": "S15_07",
+   "text": "Loud. Steady. Impossible to switch off from the driver's seat.",
+   "start": 686.305,
+   "dur": 3.539
+  },
+  {
+   "id": "S15_08",
+   "text": "The man at the window went completely still.",
+   "start": 690.293,
+   "dur": 2.546
+  },
+  {
+   "id": "S15_09",
+   "text": "Behind the barrier, the crumpled suit moved. A hand came up onto the concrete. Then a head.",
+   "start": 693.289,
+   "dur": 5.189
+  },
+  {
+   "id": "S15_10",
+   "text": "In the open van, a third figure sat up.",
+   "start": 698.928,
+   "dur": 2.709
+  },
+  {
+   "id": "S15_11",
+   "text": "Every one of them turned toward the same sound.",
+   "start": 702.087,
+   "dur": 2.67
+  },
+  {
+   "id": "S15_12",
+   "text": "Daniel pressed the accelerator.",
+   "start": 705.208,
+   "dur": 2.088
+  },
+  {
+   "id": "S16_01",
+   "text": "The man moved with the truck.",
+   "start": 707.796,
+   "dur": 1.934
+  },
+  {
+   "id": "S16_02",
+   "text": "One step. Two.",
+   "start": 710.181,
+   "dur": 1.304
+  },
+  {
+   "id": "S16_03",
+   "text": "Then a sudden, violent burst of speed that no injured man should have had.",
+   "start": 711.934,
+   "dur": 4.285
+  },
+  {
+   "id": "S16_04",
+   "text": "His palm hit the glass beside Daniel's face.",
+   "start": 716.669,
+   "dur": 2.903
+  },
+  {
+   "id": "S16_05",
+   "text": "The mask slid down below his chin. His jaw hung open at a wrong angle, the skin of his throat pulled tight, and he made no attempt to speak.",
+   "start": 720.172,
+   "dur": 8.207
+  },
+  {
+   "id": "S16_06",
+   "text": "The second blow rocked the mirror on its arm.",
+   "start": 728.829,
+   "dur": 2.605
+  },
+  {
+   "id": "S16_07",
+   "text": "Behind him, the others were coming around the barrier, toward the beeping.",
+   "start": 731.884,
+   "dur": 3.607
+  },
+  {
+   "id": "S16_08",
+   "text": "The third blow didn't crack the glass.",
+   "start": 735.942,
+   "dur": 2.308
+  },
+  {
+   "id": "S16_09",
+   "text": "It did something worse.",
+   "start": 738.7,
+   "dur": 1.614
+  },
+  {
+   "id": "S16_10",
+   "text": "Somewhere inside the door, a part gave way, and the window dropped.",
+   "start": 741.113,
+   "dur": 3.798
+  },
+  {
+   "id": "S16_11",
+   "text": "One inch.",
+   "start": 745.362,
+   "dur": 0.852
+  },
+  {
+   "id": "S16_12",
+   "text": "Cold air and rain came through the gap. And with them, four gloved fingertips, curling over the top of the glass.",
+   "start": 747.213,
+   "dur": 6.169
+  },
+  {
+   "id": "S17_01",
+   "text": "The truck was faster than they were. For a few seconds, that was enough.",
+   "start": 754.582,
+   "dur": 3.675
+  },
+  {
+   "id": "S17_02",
+   "text": "Daniel cut the wheel, swung the truck around on the gravel turnout, and shoved it into drive.",
+   "start": 758.707,
+   "dur": 4.917
+  },
+  {
+   "id": "S17_03",
+   "text": "The fingertips slid away. In the mirror, three white suits shrank into the floodlights.",
+   "start": 764.073,
+   "dur": 4.767
+  },
+  {
+   "id": "S17_04",
+   "text": "He pressed the window switch.",
+   "start": 769.29,
+   "dur": 1.968
+  },
+  {
+   "id": "S17_05",
+   "text": "The motor whined inside the door. The glass didn't move.",
+   "start": 771.859,
+   "dur": 3.294
+  },
+  {
+   "id": "S17_06",
+   "text": "The gap stayed open.",
+   "start": 775.602,
+   "dur": 1.556
+  },
+  {
+   "id": "S17_07",
+   "text": "As the truck came around, his headlights swept across a sign at the back of the checkpoint. It faced the road into town, and he had never seen its front.",
+   "start": 778.058,
+   "dur": 8.313
+  },
+  {
+   "id": "S17_08",
+   "text": "Temporary steel legs. A portable lamp. A white panel, printed by the county.",
+   "start": 786.821,
+   "dur": 4.605
+  },
+  {
+   "id": "S17_09",
+   "text": "Stop. Lower driver window for screening.",
+   "start": 791.875,
+   "dur": 2.69
+  },
+  {
+   "id": "S17_10",
+   "text": "It was the same sign he had passed at the town limit. Someone there had blacked out the county's instruction and written their own, in thick marker, pressed hard enough to tear.",
+   "start": 795.565,
+   "dur": 9.297
+  },
+  {
+   "id": "S17_11",
+   "text": "The same hand that had written no response, address after address.",
+   "start": 805.312,
+   "dur": 3.778
+  },
+  {
+   "id": "S17_12",
+   "text": "Someone in Bellwether had worked it out before he did. The danger had never been in the air.",
+   "start": 809.54,
+   "dur": 5.023
+  },
+  {
+   "id": "S17_13",
+   "text": "It was in the people asking you to let them close.",
+   "start": 815.013,
+   "dur": 2.72
+  },
+  {
+   "id": "S17_14",
+   "text": "The route screen recalculated. Only one road out was open.",
+   "start": 818.732,
+   "dur": 3.916
+  },
+  {
+   "id": "S17_15",
+   "text": "It led back through Bellwether.",
+   "start": 823.099,
+   "dur": 1.95
+  }
+ ],
+ "overlays": [
+  {
+   "style": "title",
+   "text": "DO NOT LOWER YOUR WINDOW",
+   "in": 32.696,
+   "out": 35.496,
+   "fx": "typewriter 0.06 s/char, hard cut out",
+   "scene": "S00"
+  },
+  {
+   "style": "phone",
+   "text": "ROUTE UPDATED · +19 MIN · via BELLWETHER",
+   "in": 48.997,
+   "out": 57.569,
+   "anchor_shot": "S01_C",
+   "scene": "S01"
+  },
+  {
+   "style": "marker",
+   "text": "KEEP VEHICLE\nWINDOWS CLOSED",
+   "in": 89.445,
+   "out": 100.135,
+   "anchor_shot": "S02_B",
+   "note": "letters drawn on stroke by stroke",
+   "scene": "S02"
+  },
+  {
+   "style": "rule",
+   "text": "RULE 1\nA lit building is not an open building.",
+   "in": 246.855,
+   "out": 251.938,
+   "scene": "S05"
+  },
+  {
+   "style": "rule",
+   "text": "RULE 2\nWhen nothing is broken, ask why everyone left.",
+   "in": 294.707,
+   "out": 300.357,
+   "scene": "S06"
+  },
+  {
+   "style": "phone",
+   "text": "Calling DISPATCH…",
+   "in": 299.357,
+   "out": 305.087,
+   "scene": "S07"
+  },
+  {
+   "style": "phone",
+   "text": "Call failed · No service",
+   "in": 305.087,
+   "out": 310.215,
+   "scene": "S07"
+  },
+  {
+   "style": "phone",
+   "text": "3.8 mi · East exit",
+   "in": 309.715,
+   "out": 317.566,
+   "scene": "S07"
+  },
+  {
+   "style": "rule",
+   "text": "RULE 3\nIn a silent town, every sound is an announcement.",
+   "in": 421.877,
+   "out": 427.685,
+   "scene": "S09"
+  },
+  {
+   "style": "printed",
+   "text": "VEHICLE SCREENING\n1. Driver window down\n2. Temperature check\n3. Destination",
+   "in": 446.452,
+   "out": 460.072,
+   "anchor_shot": "S10_C",
+   "scene": "S10"
+  },
+  {
+   "style": "marker",
+   "text": "NO RESPONSE  ×14",
+   "in": 464.415,
+   "out": 471.712,
+   "anchor_shot": "S10_D",
+   "note": "repeat the marker phrase down the column; same hand font as S02",
+   "scene": "S10"
+  },
+  {
+   "style": "rule",
+   "text": "RULE 4\nAn instruction is only as safe as the person giving it.",
+   "in": 610.281,
+   "out": 616.341,
+   "scene": "S13"
+  },
+  {
+   "style": "phone",
+   "text": "DISPATCH\nincoming call",
+   "in": 640.007,
+   "out": 657.861,
+   "anchor_shot": "S14_C",
+   "scene": "S14"
+  },
+  {
+   "style": "printed",
+   "text": "STOP\nLOWER DRIVER WINDOW\nFOR SCREENING",
+   "in": 791.675,
+   "out": 796.365,
+   "anchor_shot": "S17_D",
+   "scene": "S17"
+  },
+  {
+   "style": "marker",
+   "text": "KEEP VEHICLE\nWINDOWS CLOSED",
+   "in": 795.565,
+   "out": 805.312,
+   "anchor_shot": "S17_E",
+   "scene": "S17"
+  },
+  {
+   "style": "phone",
+   "text": "Route recalculated · 1 route · via BELLWETHER",
+   "in": 819.232,
+   "out": 826.749,
+   "anchor_shot": "S17_G",
+   "scene": "S17"
+  }
+ ],
+ "sfx": [
+  {
+   "cue": "generator_hum",
+   "in": 0.0,
+   "out": 10.544,
+   "scene": "S00"
+  },
+  {
+   "cue": "rain_outside",
+   "in": 0.0,
+   "out": 32.496,
+   "scene": "S00"
+  },
+  {
+   "cue": "coverall_rustle",
+   "in": 4.186,
+   "scene": "S00"
+  },
+  {
+   "cue": "engine_idle_cab",
+   "in": 20.166,
+   "out": 32.496,
+   "scene": "S00"
+  },
+  {
+   "cue": "window_motor_whine",
+   "in": 32.796,
+   "gain_db": -12,
+   "note": "only a fraction of a second, then silence: a tease of the ending",
+   "scene": "S00"
+  },
+  {
+   "cue": "engine_idle_cab",
+   "in": 35.496,
+   "out": 77.78,
+   "scene": "S01"
+  },
+  {
+   "cue": "tires_wet",
+   "in": 35.496,
+   "out": 77.78,
+   "scene": "S01"
+  },
+  {
+   "cue": "wipers",
+   "in": 57.069,
+   "out": 77.78,
+   "scene": "S01"
+  },
+  {
+   "cue": "radio_low_instrumental",
+   "in": 35.496,
+   "out": 77.78,
+   "gain_db": -20,
+   "note": "must continue under S02–S09 until the radio click in S09",
+   "scene": "S01"
+  },
+  {
+   "cue": "tires_wet",
+   "in": 77.78,
+   "out": 125.745,
+   "scene": "S02"
+  },
+  {
+   "cue": "tires_wet",
+   "in": 117.155,
+   "gain_db": 4,
+   "note": "passing vehicle swoosh, left-to-right, no siren",
+   "scene": "S02"
+  },
+  {
+   "cue": "engine_idle_cab",
+   "in": 125.745,
+   "out": 142.666,
+   "note": "engine off at 3e",
+   "scene": "S03"
+  },
+  {
+   "cue": "canopy_hum",
+   "in": 142.666,
+   "out": 171.118,
+   "scene": "S03"
+  },
+  {
+   "cue": "door_chime_loop",
+   "in": 143.066,
+   "out": 171.118,
+   "note": "1 Hz chime, keeps going into S04 under the store ambience at -18 dB",
+   "scene": "S03"
+  },
+  {
+   "cue": "truck_door_close",
+   "in": 163.162,
+   "scene": "S03"
+  },
+  {
+   "cue": "store_fridges",
+   "in": 171.118,
+   "out": 206.82,
+   "scene": "S04"
+  },
+  {
+   "cue": "door_chime_loop",
+   "in": 171.118,
+   "out": 206.82,
+   "gain_db": -18,
+   "scene": "S04"
+  },
+  {
+   "cue": "phone_buzz_counter",
+   "in": 188.661,
+   "scene": "S04"
+  },
+  {
+   "cue": "scrape_door",
+   "in": 196.374,
+   "scene": "S04"
+  },
+  {
+   "cue": "scrape_door",
+   "in": 200.061,
+   "gain_db": -3,
+   "scene": "S04"
+  },
+  {
+   "cue": "soup_can_roll",
+   "in": 216.246,
+   "scene": "S05"
+  },
+  {
+   "cue": "handle_strain",
+   "in": 223.793,
+   "out": 233.559,
+   "scene": "S05"
+  },
+  {
+   "cue": "truck_door_close",
+   "in": 236.097,
+   "scene": "S05"
+  },
+  {
+   "cue": "door_lock_thunk",
+   "in": 237.297,
+   "scene": "S05"
+  },
+  {
+   "cue": "engine_rev",
+   "in": 240.125,
+   "scene": "S05"
+  },
+  {
+   "cue": "engine_idle_cab",
+   "in": 240.125,
+   "out": 250.938,
+   "scene": "S05"
+  },
+  {
+   "cue": "engine_idle_cab",
+   "in": 250.938,
+   "out": 299.357,
+   "scene": "S06"
+  },
+  {
+   "cue": "tires_wet",
+   "in": 250.938,
+   "out": 299.357,
+   "gain_db": -6,
+   "scene": "S06"
+  },
+  {
+   "cue": "hazard_tick",
+   "in": 261.774,
+   "out": 273.446,
+   "note": "the running car's idle, heard only while passing it",
+   "scene": "S06"
+  },
+  {
+   "cue": "call_drop_tone",
+   "in": 302.157,
+   "scene": "S07"
+  },
+  {
+   "cue": "call_drop_tone",
+   "in": 305.387,
+   "scene": "S07"
+  },
+  {
+   "cue": "engine_idle_cab",
+   "in": 299.357,
+   "out": 341.832,
+   "scene": "S07"
+  },
+  {
+   "cue": "engine_idle_cab",
+   "in": 341.832,
+   "out": 383.129,
+   "scene": "S08"
+  },
+  {
+   "cue": "horn_tap",
+   "in": 361.746,
+   "note": "single short tap; everything except rain and engine ducks -12 dB for 4 s after",
+   "scene": "S08"
+  },
+  {
+   "cue": "radio_low_instrumental",
+   "in": 383.129,
+   "out": 395.398,
+   "gain_db": -20,
+   "scene": "S09"
+  },
+  {
+   "cue": "radio_click_off",
+   "in": 395.398,
+   "note": "after this the cab is dry: engine, rain, nothing else",
+   "scene": "S09"
+  },
+  {
+   "cue": "engine_idle_cab",
+   "in": 383.129,
+   "out": 426.685,
+   "scene": "S09"
+  },
+  {
+   "cue": "engine_idle_cab",
+   "in": 426.685,
+   "out": 476.258,
+   "scene": "S10"
+  },
+  {
+   "cue": "van_door_creak",
+   "in": 432.511,
+   "out": 444.952,
+   "gain_db": -6,
+   "scene": "S10"
+  },
+  {
+   "cue": "fence_drag",
+   "in": 487.796,
+   "scene": "S11"
+  },
+  {
+   "cue": "fence_clatter",
+   "in": 490.628,
+   "scene": "S11"
+  },
+  {
+   "cue": "boxes_shift",
+   "in": 511.729,
+   "scene": "S11"
+  },
+  {
+   "cue": "engine_rev",
+   "in": 511.729,
+   "scene": "S11"
+  },
+  {
+   "cue": "generator_hum",
+   "in": 523.869,
+   "out": 568.057,
+   "scene": "S12"
+  },
+  {
+   "cue": "engine_idle_cab",
+   "in": 519.944,
+   "out": 568.057,
+   "scene": "S12"
+  },
+  {
+   "cue": "generator_hum",
+   "in": 568.057,
+   "out": 615.341,
+   "scene": "S13"
+  },
+  {
+   "cue": "engine_idle_cab",
+   "in": 568.057,
+   "out": 615.341,
+   "scene": "S13"
+  },
+  {
+   "cue": "coverall_rustle",
+   "in": 568.557,
+   "scene": "S13"
+  },
+  {
+   "cue": "coverall_rustle",
+   "in": 606.48,
+   "gain_db": -4,
+   "scene": "S13"
+  },
+  {
+   "cue": "generator_hum",
+   "in": 615.341,
+   "out": 664.906,
+   "scene": "S14"
+  },
+  {
+   "cue": "phone_ring_mount",
+   "in": 640.107,
+   "out": 657.861,
+   "note": "loud, hard stop when silenced",
+   "scene": "S14"
+  },
+  {
+   "cue": "handle_pull",
+   "in": 650.362,
+   "scene": "S14"
+  },
+  {
+   "cue": "handle_pull",
+   "in": 652.262,
+   "gain_db": 3,
+   "scene": "S14"
+  },
+  {
+   "cue": "generator_hum",
+   "in": 664.906,
+   "out": 707.796,
+   "scene": "S15"
+  },
+  {
+   "cue": "backup_alarm_loop",
+   "in": 684.045,
+   "out": 707.796,
+   "note": "continues through S16 until the truck shifts into drive in S17",
+   "scene": "S15"
+  },
+  {
+   "cue": "engine_rev",
+   "in": 705.708,
+   "scene": "S15"
+  },
+  {
+   "cue": "backup_alarm_loop",
+   "in": 707.796,
+   "out": 754.582,
+   "scene": "S16"
+  },
+  {
+   "cue": "palm_hit_glass",
+   "in": 716.769,
+   "scene": "S16"
+  },
+  {
+   "cue": "palm_hit_glass",
+   "in": 728.829,
+   "gain_db": 2,
+   "scene": "S16"
+  },
+  {
+   "cue": "mirror_rattle",
+   "in": 728.929,
+   "scene": "S16"
+  },
+  {
+   "cue": "palm_hit_glass",
+   "in": 736.142,
+   "gain_db": 3,
+   "scene": "S16"
+  },
+  {
+   "cue": "window_drop_clunk",
+   "in": 742.313,
+   "scene": "S16"
+  },
+  {
+   "cue": "rain_gust_inside",
+   "in": 747.213,
+   "out": 754.582,
+   "note": "outside sound suddenly enters the cab: generator, rain, alarm all 6 dB louder",
+   "scene": "S16"
+  },
+  {
+   "cue": "backup_alarm_loop",
+   "in": 754.582,
+   "out": 760.207,
+   "note": "stops the instant he shifts into drive",
+   "scene": "S17"
+  },
+  {
+   "cue": "engine_rev",
+   "in": 760.207,
+   "scene": "S17"
+  },
+  {
+   "cue": "window_motor_whine",
+   "in": 769.59,
+   "out": 775.602,
+   "scene": "S17"
+  },
+  {
+   "cue": "rain_gust_inside",
+   "in": 769.29,
+   "out": 830.249,
+   "gain_db": -6,
+   "note": "the gap stays audible to the very end",
+   "scene": "S17"
+  },
+  {
+   "cue": "engine_idle_cab",
+   "in": 775.602,
+   "out": 830.249,
+   "scene": "S17"
+  }
+ ],
+ "music": [
+  {
+   "scene": "S00",
+   "start": 0.0,
+   "end": 35.496,
+   "state": "drone",
+   "intensity": 0.25
+  },
+  {
+   "scene": "S01",
+   "start": 35.496,
+   "end": 77.78,
+   "state": "drone",
+   "intensity": 0.15
+  },
+  {
+   "scene": "S02",
+   "start": 77.78,
+   "end": 125.745,
+   "state": "drone",
+   "intensity": 0.2
+  },
+  {
+   "scene": "S03",
+   "start": 125.745,
+   "end": 171.118,
+   "state": "drone",
+   "intensity": 0.2
+  },
+  {
+   "scene": "S04",
+   "start": 171.118,
+   "end": 206.82,
+   "state": "drone",
+   "intensity": 0.3
+  },
+  {
+   "scene": "S05",
+   "start": 206.82,
+   "end": 250.938,
+   "state": "drone_rising",
+   "intensity": 0.45
+  },
+  {
+   "scene": "S06",
+   "start": 250.938,
+   "end": 299.357,
+   "state": "drone",
+   "intensity": 0.3
+  },
+  {
+   "scene": "S07",
+   "start": 299.357,
+   "end": 341.832,
+   "state": "drone",
+   "intensity": 0.35
+  },
+  {
+   "scene": "S08",
+   "start": 341.832,
+   "end": 383.129,
+   "state": "drone",
+   "intensity": 0.35,
+   "drop_out_at": 363.202
+  },
+  {
+   "scene": "S09",
+   "start": 383.129,
+   "end": 426.685,
+   "state": "silent_then_pulse",
+   "intensity": 0.4,
+   "back_in_at": 394.798
+  },
+  {
+   "scene": "S10",
+   "start": 426.685,
+   "end": 476.258,
+   "state": "pulse",
+   "intensity": 0.4
+  },
+  {
+   "scene": "S11",
+   "start": 476.258,
+   "end": 519.944,
+   "state": "pulse_rising",
+   "intensity": 0.55
+  },
+  {
+   "scene": "S12",
+   "start": 519.944,
+   "end": 568.057,
+   "state": "relief_thin",
+   "intensity": 0.25,
+   "note": "brief loosening, never triumphant"
+  },
+  {
+   "scene": "S13",
+   "start": 568.057,
+   "end": 615.341,
+   "state": "drone_low",
+   "intensity": 0.35
+  },
+  {
+   "scene": "S14",
+   "start": 615.341,
+   "end": 664.906,
+   "state": "drone_narrow",
+   "intensity": 0.5
+  },
+  {
+   "scene": "S15",
+   "start": 664.906,
+   "end": 707.796,
+   "state": "pulse_fast",
+   "intensity": 0.7,
+   "note": "pulse locks to the backup alarm rhythm"
+  },
+  {
+   "scene": "S16",
+   "start": 707.796,
+   "end": 754.582,
+   "state": "pulse_fast",
+   "intensity": 0.85,
+   "drop_out_at": 738.7
+  },
+  {
+   "scene": "S17",
+   "start": 754.582,
+   "end": 830.249,
+   "state": "drone_low",
+   "intensity": 0.45,
+   "out_at": 826.249
+  }
+ ],
+ "duration": 830.249
+}

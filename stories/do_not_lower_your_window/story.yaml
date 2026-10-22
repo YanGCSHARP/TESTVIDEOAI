@@ -1,0 +1,758 @@
+# DO NOT LOWER YOUR WINDOW — production script, revision 2.
+#
+# How this file is read by code (tools/story_timeline.py):
+#   * Each scene's `vo` is an ordered list of items. An item is either
+#       {t: "<one sentence of narration>", p: <pause after, s>}   or   {beat: <seconds of silence>}
+#     Items are numbered from 1 inside each scene.
+#   * Every item is covered by exactly one shot: shot.covers = [first_item, last_item].
+#     Shot duration = measured audio of those items (+ pauses/beats) + shot.hold.
+#     Picture follows the voice, so there is never dead air and words are never cut.
+#   * Anchors for overlays / sfx / music: "N" = start of item N, "Ne" = end of item N,
+#     optional "+x" / "-x" offset in seconds, e.g. "4e+0.3".
+#   * Text never appears inside generated images. Everything readable is an overlay.
+#   * prompt = what the image/video model gets, after STYLE.prompt and the referenced
+#     CONTINUITY descriptions are prepended. NEGATIVE applies to every shot.
+
+project:
+  title: "DO NOT LOWER YOUR WINDOW"
+  language: en-US
+  target_minutes: [11.5, 13.0]
+  aspect: "16:9"
+  resolution: [1920, 1080]
+  fps: 30
+  genre: "cinematic biological horror, slow burn"
+  setting: "Bellwether, Pennsylvania (fictional town, pop. ~11,000), late October, 2:01–2:44 AM, light rain, thin ground fog"
+
+narrator:
+  voices: 1
+  engine: kokoro            # offline; swap for a recorded or licensed voice later
+  voice: am_onyx
+  speed: 0.90
+  default_pause: 0.45
+  perspective: "third person, close on Daniel; documentary narrator who states numbered rules"
+  delivery: "low, restrained, unhurried; no theatrics; slightly slower and quieter in S13–S17"
+  dialogue: none            # no character ever speaks, no lip-sync anywhere
+
+STYLE:
+  prompt: >-
+    cinematic illustrated realism, painterly digital matte painting, film still, 35mm anamorphic look,
+    cold blue-gray night palette with muted sodium-amber practical lights, wet reflective asphalt,
+    light rain, soft volumetric fog, shallow depth of field, restrained film grain, American small town
+  negative: >-
+    text, letters, words, numbers, logos, watermarks, signage with writing, license plate characters,
+    speaking, open mouth talking, lip sync, glowing eyes, red eyes, monsters, mutations, tentacles,
+    exposed organs, blood spray, gore, zombie crowd, explosions, military, soldiers, weapons,
+    laboratory, daylight, snow, right-hand drive, steering wheel on the right, cartoon, anime, 3d render
+
+CONTINUITY:
+  DANIEL:
+    desc: >-
+      American man, 37, short dark-brown hair, light stubble, tired brown eyes, charcoal canvas work
+      jacket over a faded navy t-shirt, dark jeans, no hat, no jewelry
+    acting: "practical, observant; tension shown by stillness and breathing, never by screaming"
+    rule: "always in the LEFT seat of the truck; never leaves the cab after S05; never lowers the window"
+  TRUCK:
+    desc: >-
+      unbranded white 26-foot American box truck, cab-over-free conventional cab, black side mirrors,
+      amber roof marker lights, rectangular white cargo box, roll-up rear door, no trailer, left-hand drive
+    interior: >-
+      dark gray dashboard, analog gauges, phone in a dash mount right of the steering wheel,
+      paper coffee cup in holder (empty), power window switch on the driver door armrest
+    rule: "never breaks down; engine runs from S05 to the end"
+  FUEL:
+    desc: >-
+      small American roadside gas station, four pumps under a faded red-and-white canopy,
+      attached convenience store with bright fluorescent interior, wet concrete apron, empty at night
+  SEDAN:
+    desc: "older dark-blue four-door sedan at the nearest pump, driver door open, driver window fully down, headlights off, dome light on"
+  WOMAN:
+    desc: >-
+      woman, about 40, shoulder-length wet brown hair, pale cream knit sweater soaked dark by rain,
+      gray slacks, no coat, arms hanging straight, face kept in shadow or turned away
+  VAN:
+    desc: "white county health department utility van with blank panels, parked at an angle, both rear doors open"
+  CHECKPOINT:
+    desc: >-
+      temporary roadblock at the east edge of town: two portable light towers with floodlights,
+      concrete jersey barriers funneling two lanes into one, a striped lowered gate arm, a white
+      utility van and a dark SUV behind the gate with doors open, a folding table under the lights,
+      a wide gravel turnout in front of the barriers, temporary road sign on steel legs facing away
+  WORKER:
+    desc: >-
+      adult man in an off-white disposable protective coverall, hood down, clear goggles,
+      white respirator-style mask, blue nitrile gloves, left glove torn across the index finger
+    reveal: >-
+      (S14 onward only) clouded milky eyes, thin dark branching discoloration on the neck,
+      dark stain spreading from the center of the mask, jaw hanging slightly crooked; no wounds, no blood
+
+OVERLAY_STYLES:
+  marker:   {font: "Permanent Marker or similar hand font", color: "#111111", on: "white panel", jitter: true}
+  printed:  {font: "Inter Bold", color: "#111111", on: "white panel"}
+  phone:    {font: "Inter SemiBold", color: "#FFFFFF", on: "phone screen UI"}
+  title:    {font: "Inter Black", color: "#F2F2F2", tracking: 0.08}
+  rule:     {font: "Inter ExtraBold", color: "#F2F2F2", accent: "#C0392B", layout: "lower-left card: 'RULE 2' small red label above the rule text", in: "fade+slide 0.4s", out: "fade 0.4s"}
+  hud:      {font: "Inter SemiBold", color: "#DDE6EC", layout: "lower-right: time, and 'MI TO EXIT' when set", size: 30}
+
+# Sound vocabulary used by the cues below (all can be synthesized or taken from a licensed library).
+SFX_LIBRARY: [engine_idle_cab, engine_rev, tires_wet, rain_on_roof, rain_outside, wipers, radio_low_instrumental,
+  door_chime_loop, canopy_hum, truck_door_close, store_fridges, phone_buzz_counter, scrape_door, soup_can_roll,
+  handle_strain, door_lock_thunk, hazard_tick, call_drop_tone, horn_tap, radio_click_off, van_door_creak,
+  fence_drag, fence_clatter, boxes_shift, generator_hum, coverall_rustle, phone_ring_mount, handle_pull,
+  backup_alarm_loop, palm_hit_glass, mirror_rattle, window_drop_clunk, rain_gust_inside, window_motor_whine]
+
+MUSIC:
+  palette: "low synth drone in D minor, sparse felt piano notes, sub pulse at 60 BPM only when stated; never melodic heroics"
+  rule: "music fully drops out for S08 item 7 to S09 item 3, and for the last 4 s of S16"
+
+scenes:
+
+# ----------------------------------------------------------------------------- S00
+- id: S00
+  title: "Cold open"
+  hud: null
+  music: {state: drone, intensity: 0.25}
+  vo:
+    - {t: "There is a gesture every truck driver in America knows."}
+    - {t: "A hand raised beside the cab. Then one finger, pointing down."}
+    - {t: "Lower your window.", p: 0.9}
+    - {t: "Daniel Reed had answered that gesture at weigh stations, toll plazas and loading docks for eleven years."}
+    - {t: "It had never cost him more than a few seconds."}
+    - {t: "At two forty-one in the morning, at the eastern edge of Bellwether, Pennsylvania, a man in a protective suit made that gesture again."}
+    - {t: "And for the first time in his life, Daniel kept his hand on the wheel.", p: 0.8}
+    - {beat: 3.0}
+  shots:
+    - {id: S00_A, covers: [1, 1], framing: "extreme close-up", camera: "slow push-in", refs: [WORKER],
+       prompt: "a blue-gloved hand rises into frame beside a truck door, floodlight glare behind it, rain streaks, face out of frame"}
+    - {id: S00_B, covers: [2, 3], framing: "close-up through driver window", camera: "locked, rain drifts", refs: [WORKER, TRUCK],
+       prompt: "the gloved index finger points down at the closed driver window, seen from inside the dark cab, raindrops on glass"}
+    - {id: S00_C, covers: [4, 5], framing: "medium montage", camera: "slow lateral drift", refs: [DANIEL, TRUCK],
+       prompt: "daytime memory tone but still muted: Daniel in the cab at a highway weigh station, window down, arm resting on the door, bored and calm"}
+    - {id: S00_D, covers: [6, 6], framing: "wide", camera: "very slow push-in", refs: [CHECKPOINT, TRUCK, WORKER],
+       prompt: "the white box truck stopped before a floodlit roadblock, a lone figure in a white protective suit beside the driver door, night rain"}
+    - {id: S00_E, covers: [7, 7], framing: "extreme close-up", camera: "locked", refs: [DANIEL],
+       prompt: "Daniel's hand gripping the steering wheel, knuckles pale, his other hand hovering away from the window switch"}
+    - {id: S00_F, covers: [8, 8], framing: "black", camera: "none", refs: [],
+       prompt: "solid black frame"}
+  overlays:
+    - {style: title, text: "DO NOT LOWER YOUR WINDOW", in: "8+0.2", out: "8e", fx: "typewriter 0.06 s/char, hard cut out"}
+  sfx:
+    - {cue: generator_hum, in: "1", out: "3e"}
+    - {cue: rain_outside, in: "1", out: "7e"}
+    - {cue: coverall_rustle, in: "2+0.3"}
+    - {cue: engine_idle_cab, in: "6", out: "7e"}
+    - {cue: window_motor_whine, in: "8+0.3", gain_db: -12, note: "only a fraction of a second, then silence: a tease of the ending"}
+
+# ----------------------------------------------------------------------------- S01
+- id: S01
+  title: "An ordinary route"
+  hud: {time: "2:01 AM"}
+  music: {state: drone, intensity: 0.15}
+  vo:
+    - {t: "Forty minutes earlier, the night had been ordinary."}
+    - {t: "Daniel had a twenty-six-foot box truck full of groceries, a delivery window that closed at five, and a dispatcher who only called when something went wrong."}
+    - {t: "A jackknifed tractor-trailer had shut down the interstate, so the routing app sent him off the highway and through Bellwether, a town he had never had a reason to see."}
+    - {t: "The detour added nineteen minutes. Nothing more."}
+    - {t: "The radio played low. The wipers kept time with it."}
+    - {t: "He had driven through smaller towns. He had driven through worse weather."}
+    - {t: "Nothing on the screen beside the wheel suggested anything ahead of him but a two-lane road, a few closed businesses, and the long dark stretch back to the interstate.", p: 0.8}
+  shots:
+    - {id: S01_A, covers: [1, 1], framing: "aerial wide", camera: "slow drone track", refs: [TRUCK],
+       prompt: "the white box truck alone on a wet two-lane road through Pennsylvania forest at night, headlights in fog"}
+    - {id: S01_B, covers: [2, 2], framing: "medium, from passenger seat", camera: "subtle handheld sway", refs: [DANIEL, TRUCK],
+       prompt: "Daniel driving, relaxed, empty paper coffee cup in holder, phone in dash mount glowing blue"}
+    - {id: S01_C, covers: [3, 3], framing: "insert", camera: "slow push-in", refs: [TRUCK],
+       prompt: "close-up of the phone in the dash mount showing a blank glowing navigation screen (route drawn as overlay later)"}
+    - {id: S01_D, covers: [4, 5], framing: "through windshield", camera: "locked to cab", refs: [TRUCK],
+       prompt: "view through the windshield, wipers mid-sweep, wet road and reflectors ahead, amber dashboard glow"}
+    - {id: S01_E, covers: [6, 7], framing: "wide side tracking", camera: "parallel tracking", refs: [TRUCK],
+       prompt: "the truck passing a dark closed roadside diner and a gravel lot, rain under a single streetlight"}
+  overlays:
+    - {style: phone, text: "ROUTE UPDATED · +19 MIN · via BELLWETHER", in: "3+1.0", out: "3e+0.5", anchor_shot: S01_C}
+  sfx:
+    - {cue: engine_idle_cab, in: "1", out: "7e"}
+    - {cue: tires_wet, in: "1", out: "7e"}
+    - {cue: wipers, in: "4", out: "7e"}
+    - {cue: radio_low_instrumental, in: "1", out: "7e", gain_db: -20, note: "must continue under S02–S09 until the radio click in S09"}
+
+# ----------------------------------------------------------------------------- S02
+- id: S02
+  title: "The sign"
+  hud: {time: "2:05 AM"}
+  music: {state: drone, intensity: 0.2}
+  vo:
+    - {t: "The sign stood just past the town limit."}
+    - {t: "Temporary steel legs. A portable lamp clamped to the top. A white panel, the kind road crews use for lane closures."}
+    - {t: "Someone had blacked out the printed message and written over it in thick marker, the letters large and uneven, pressed hard enough to tear the surface."}
+    - {t: "Keep vehicle windows closed.", p: 0.9}
+    - {t: "Daniel glanced at the window beside him. Already closed."}
+    - {t: "Beyond the trees, the lights of a processing plant glowed in the mist. A chemical leak, he decided. A road crew with no time to print a proper sign."}
+    - {t: "That was the first explanation of the night."}
+    - {t: "It lasted about a minute."}
+    - {t: "An ambulance came toward him in the other lane, emergency lights turning."}
+    - {t: "Its siren was off.", p: 0.6}
+    - {beat: 2.0}
+  shots:
+    - {id: S02_A, covers: [1, 2], framing: "wide from approaching cab", camera: "slow push as truck approaches", refs: [TRUCK],
+       prompt: "a temporary road sign on steel legs at the roadside, lamp on top, blank white panel, rain in the lamp beam, forest edge"}
+    - {id: S02_B, covers: [3, 4], framing: "close-up", camera: "slow pan across panel", refs: [],
+       prompt: "close-up of the white panel, printed area scribbled over with heavy black marker strokes, surface torn in places, BLANK space where letters will be overlaid"}
+    - {id: S02_C, covers: [5, 5], framing: "close-up", camera: "locked", refs: [DANIEL, TRUCK],
+       prompt: "Daniel's eyes in the side window reflection, closed glass beaded with rain"}
+    - {id: S02_D, covers: [6, 8], framing: "wide through side window", camera: "slow lateral drift", refs: [],
+       prompt: "distant industrial processing plant lights through trees and mist, no smoke, no fire"}
+    - {id: S02_E, covers: [9, 11], framing: "through windshield", camera: "locked", refs: [TRUCK],
+       prompt: "an ambulance with flashing red-and-white emergency lights passes in the opposite lane, its cabin dark, then gone"}
+  overlays:
+    - {style: marker, text: "KEEP VEHICLE\nWINDOWS CLOSED", in: "3+1.2", out: "4e+0.6", anchor_shot: S02_B, note: "letters drawn on stroke by stroke"}
+  sfx:
+    - {cue: tires_wet, in: "1", out: "11e"}
+    - {cue: tires_wet, in: "9", gain_db: 4, note: "passing vehicle swoosh, left-to-right, no siren"}
+
+# ----------------------------------------------------------------------------- S03
+- id: S03
+  title: "The only lit building"
+  hud: {time: "2:09 AM"}
+  music: {state: drone, intensity: 0.2}
+  vo:
+    - {t: "Bellwether Fuel was the only lit building on Main Street."}
+    - {t: "Four pumps under a red-and-white canopy. A convenience store with every light on. A blue sedan at the nearest pump."}
+    - {t: "Daniel pulled in for coffee. Out of habit, he parked at the edge of the lot, nose toward the exit."}
+    - {t: "The sedan's driver door stood open. The window was rolled all the way down, and the seat was dark with rain."}
+    - {t: "The keys were still in the ignition. That was why the chime kept sounding. A soft, patient tone, repeating every second, for no one."}
+    - {t: "He waited for the driver to come back out of the store."}
+    - {t: "Nobody did."}
+    - {t: "The driver was in the restroom, he told himself. It was a reasonable explanation."}
+    - {t: "He would stop using that word soon.", p: 0.8}
+  shots:
+    - {id: S03_A, covers: [1, 2], framing: "wide establishing", camera: "slow push-in", refs: [FUEL, SEDAN],
+       prompt: "the gas station glowing alone in the rainy dark street, blue sedan at the first pump"}
+    - {id: S03_B, covers: [3, 3], framing: "high wide", camera: "locked", refs: [FUEL, TRUCK],
+       prompt: "the white box truck parks at the far edge of the lot, front facing the exit, not at a pump"}
+    - {id: S03_C, covers: [4, 4], framing: "medium", camera: "slow dolly along car", refs: [SEDAN],
+       prompt: "the empty sedan, driver door open, window down, rain falling onto the dark wet seat, dome light on"}
+    - {id: S03_D, covers: [5, 5], framing: "insert", camera: "locked", refs: [SEDAN],
+       prompt: "keys hanging in the ignition, dashboard warning light blinking softly"}
+    - {id: S03_E, covers: [6, 7], framing: "from inside cab", camera: "locked, wipers off", refs: [DANIEL, FUEL],
+       prompt: "Daniel waits behind the wheel watching the bright store entrance, nobody comes out"}
+    - {id: S03_F, covers: [8, 9], framing: "medium wide", camera: "camera stays outside, slow pull-back", refs: [DANIEL, FUEL],
+       prompt: "Daniel crosses the wet apron toward the store entrance, seen from behind, the sedan in the foreground"}
+  sfx:
+    - {cue: engine_idle_cab, in: "1", out: "3e", note: "engine off at 3e"}
+    - {cue: canopy_hum, in: "3e", out: "9e"}
+    - {cue: door_chime_loop, in: "3e+0.4", out: "9e", note: "1 Hz chime, keeps going into S04 under the store ambience at -18 dB"}
+    - {cue: truck_door_close, in: "8+0.5"}
+
+# ----------------------------------------------------------------------------- S04
+- id: S04
+  title: "Unfinished work"
+  hud: {time: "2:11 AM"}
+  music: {state: drone, intensity: 0.3}
+  vo:
+    - {t: "Inside, the store smelled of burnt coffee and floor cleaner."}
+    - {t: "A paper cup sat under the dispenser. Coffee had overflowed and was still dripping into the tray, which meant the machine had been started minutes ago, not hours."}
+    - {t: "A carton of canned soup sat in the aisle, half unpacked."}
+    - {t: "Behind the register, a phone lit up, buzzed against the counter, and went dark."}
+    - {t: "Daniel looked toward the stockroom door."}
+    - {t: "Something touched the other side of it."}
+    - {t: "Not a knock.", p: 0.7}
+    - {t: "A slow scrape, at the height of a man's shoulder. Then the soft pressure of weight settling against the wood.", p: 0.9}
+  shots:
+    - {id: S04_A, covers: [1, 2], framing: "close tracking", camera: "slow dolly along counter", refs: [FUEL],
+       prompt: "coffee station inside the store, a paper cup under the dispenser, dark coffee overflowing into the drip tray, harsh fluorescent light"}
+    - {id: S04_B, covers: [3, 3], framing: "low medium", camera: "locked", refs: [FUEL],
+       prompt: "an open cardboard carton of soup cans half unpacked on the aisle floor, some cans on the shelf"}
+    - {id: S04_C, covers: [4, 4], framing: "insert", camera: "locked", refs: [],
+       prompt: "a smartphone face up on the counter behind the register, screen lit, then dark (caller info blank)"}
+    - {id: S04_D, covers: [5, 6], framing: "over-the-shoulder", camera: "very slow push past Daniel", refs: [DANIEL, FUEL],
+       prompt: "Daniel in the foreground, out of focus, a closed gray stockroom door at the back of the store in focus"}
+    - {id: S04_E, covers: [7, 8], framing: "close-up", camera: "locked", refs: [],
+       prompt: "the stockroom door, its surface flexing very slightly inward at shoulder height as weight leans on it from behind"}
+  sfx:
+    - {cue: store_fridges, in: "1", out: "8e"}
+    - {cue: door_chime_loop, in: "1", out: "8e", gain_db: -18}
+    - {cue: phone_buzz_counter, in: "4+0.4"}
+    - {cue: scrape_door, in: "6+0.6"}
+    - {cue: scrape_door, in: "8", gain_db: -3}
+
+# ----------------------------------------------------------------------------- S05
+- id: S05
+  title: "The handle"
+  hud: {time: "2:13 AM"}
+  music: {state: drone_rising, intensity: 0.45}
+  vo:
+    - {t: "Under the door, in the strip of light from the stockroom, he could see the shadows of two feet. Standing close. Not moving."}
+    - {t: "Daniel took one step back."}
+    - {t: "His heel hit the soup carton. A can rolled across the floor and stopped against the counter."}
+    - {t: "The scrape stopped.", p: 0.9}
+    - {t: "Then the handle began to turn. Slowly, all the way to the end of its travel."}
+    - {t: "Whoever stood behind it kept turning, as if the handle might give a little more."}
+    - {t: "Daniel left without the coffee."}
+    - {t: "In the cab, he locked both doors before he started the engine."}
+    - {t: "In his mirror, the store entrance swung open."}
+    - {t: "He turned onto the road before he could see who walked out.", p: 0.7}
+    - {t: "Rule one. A lit building is not an open building.", p: 1.0}
+  shots:
+    - {id: S05_A, covers: [1, 1], framing: "floor-level close-up", camera: "locked", refs: [],
+       prompt: "gap under a closed door, bright light behind it, the shadows of two feet standing still"}
+    - {id: S05_B, covers: [2, 4], framing: "low angle", camera: "locked", refs: [DANIEL],
+       prompt: "Daniel's work boot steps back and knocks a soup can, which rolls across the tile floor"}
+    - {id: S05_C, covers: [5, 6], framing: "extreme close-up", camera: "slow push-in", refs: [],
+       prompt: "a metal lever door handle slowly pressing down from the other side, straining at its limit"}
+    - {id: S05_D, covers: [7, 8], framing: "medium from passenger side", camera: "handheld, tense", refs: [DANIEL, TRUCK],
+       prompt: "Daniel slams into the driver seat, hand on the door lock button, engine starting, breath fogging"}
+    - {id: S05_E, covers: [9, 10], framing: "mirror insert", camera: "locked", refs: [TRUCK, FUEL],
+       prompt: "the truck's side mirror: the store's glass entrance door swinging open, no person visible yet, the lot receding"}
+    - {id: S05_F, covers: [11, 11], framing: "wide", camera: "slow pull-back", refs: [FUEL],
+       prompt: "the brightly lit empty gas station from the dark road, rain, truck tail lights leaving frame"}
+  overlays:
+    - {style: rule, text: "RULE 1\nA lit building is not an open building.", in: "11", out: "11e+1.0"}
+  sfx:
+    - {cue: soup_can_roll, in: "3+0.2"}
+    - {cue: handle_strain, in: "5", out: "6e"}
+    - {cue: truck_door_close, in: "8"}
+    - {cue: door_lock_thunk, in: "8+1.2"}
+    - {cue: engine_rev, in: "8e"}
+    - {cue: engine_idle_cab, in: "9", out: "11e"}
+
+# ----------------------------------------------------------------------------- S06
+- id: S06
+  title: "Nothing broken"
+  hud: {time: "2:16 AM"}
+  music: {state: drone, intensity: 0.3}
+  vo:
+    - {t: "Half a mile on, three cars narrowed Main Street to a single lane."}
+    - {t: "There was no wreck."}
+    - {t: "No broken glass. No airbags. No steam rising from a radiator."}
+    - {t: "One car had rolled to a stop with its front wheels against the curb. Another stood across the center line, its engine still running."}
+    - {t: "A grocery bag had spilled oranges into the gutter."}
+    - {t: "Daniel eased between them at walking speed, and that was when he noticed what the three cars had in common."}
+    - {t: "Every driver's window was rolled all the way down.", p: 0.9}
+    - {t: "In the last car, a child's rain jacket hung from the open rear door. He searched the sidewalks for a family."}
+    - {t: "There was nobody to flag him down. Nobody asking for help."}
+    - {t: "Rule two. When nothing is broken, ask why everyone left.", p: 1.0}
+  shots:
+    - {id: S06_A, covers: [1, 3], framing: "through windshield", camera: "slow creep forward", refs: [TRUCK],
+       prompt: "three abandoned cars on a wet small-town main street leaving a single gap, intact bodies, hazard lights off, street lamps"}
+    - {id: S06_B, covers: [4, 5], framing: "slow lateral pass", camera: "tracking at walking speed", refs: [],
+       prompt: "a sedan with front wheels against the curb, a hatchback diagonal across the center line with exhaust vapor, oranges spilled from a paper grocery bag in the gutter"}
+    - {id: S06_C, covers: [6, 7], framing: "detail montage", camera: "slow pans", refs: [],
+       prompt: "three car driver windows each fully rolled down, rain falling into the interiors, empty seats"}
+    - {id: S06_D, covers: [8, 8], framing: "close-up", camera: "locked", refs: [],
+       prompt: "a small yellow child's rain jacket hanging from an open rear car door, swaying in the wind"}
+    - {id: S06_E, covers: [9, 10], framing: "mirror insert", camera: "locked", refs: [TRUCK],
+       prompt: "the side mirror shows empty wet sidewalks and the abandoned cars falling behind"}
+  overlays:
+    - {style: rule, text: "RULE 2\nWhen nothing is broken, ask why everyone left.", in: "10", out: "10e+1.0"}
+  sfx:
+    - {cue: engine_idle_cab, in: "1", out: "10e"}
+    - {cue: tires_wet, in: "1", out: "10e", gain_db: -6}
+    - {cue: hazard_tick, in: "4", out: "5e", note: "the running car's idle, heard only while passing it"}
+
+# ----------------------------------------------------------------------------- S07
+- id: S07
+  title: "No signal"
+  hud: {time: "2:18 AM", miles_to_exit: 3.8}
+  music: {state: drone, intensity: 0.35}
+  vo:
+    - {t: "He called his dispatcher."}
+    - {t: "The call connected, then dropped before he heard a voice."}
+    - {t: "The second attempt didn't connect at all. One bar of signal. Then none."}
+    - {t: "The route screen still showed the same calm blue line. Three point eight miles to the eastern edge of town, then open highway."}
+    - {t: "He thought about turning around."}
+    - {t: "Behind him were the empty cars, the gas station, and whatever had been standing behind that door."}
+    - {t: "Ahead, Main Street ran straight and lit, with working traffic signals and nothing in the road."}
+    - {t: "Daniel kept going."}
+    - {t: "It wasn't courage."}
+    - {t: "It was the oldest mistake people make in an emergency. Choosing the direction where nothing bad has happened yet.", p: 1.0}
+  shots:
+    - {id: S07_A, covers: [1, 3], framing: "insert", camera: "locked", refs: [TRUCK],
+       prompt: "phone in the dash mount, screen lit (call UI added as overlay), Daniel's finger tapping it, rain on windshield beyond"}
+    - {id: S07_B, covers: [4, 4], framing: "insert", camera: "slow push", refs: [TRUCK],
+       prompt: "the phone screen glowing blue in the dark cab, blank (route line added as overlay)"}
+    - {id: S07_C, covers: [5, 6], framing: "mirror insert", camera: "locked", refs: [TRUCK],
+       prompt: "side mirror: the dark street behind, abandoned cars swallowed by fog"}
+    - {id: S07_D, covers: [7, 8], framing: "through windshield", camera: "steady forward", refs: [TRUCK],
+       prompt: "long straight small-town main street, traffic signals cycling green over empty wet road, storefronts dark"}
+    - {id: S07_E, covers: [9, 10], framing: "close profile", camera: "locked", refs: [DANIEL],
+       prompt: "Daniel's profile lit by dashboard amber, jaw set, eyes forward"}
+  overlays:
+    - {style: phone, text: "Calling DISPATCH…", in: "1", out: "2e"}
+    - {style: phone, text: "Call failed · No service", in: "3", out: "3e+0.5"}
+    - {style: phone, text: "3.8 mi · East exit", in: "4", out: "4e+0.5"}
+  sfx:
+    - {cue: call_drop_tone, in: "2+0.6"}
+    - {cue: call_drop_tone, in: "3+0.3"}
+    - {cue: engine_idle_cab, in: "1", out: "10e"}
+
+# ----------------------------------------------------------------------------- S08
+- id: S08
+  title: "The crosswalk"
+  hud: {time: "2:23 AM", miles_to_exit: 2.9}
+  music: {state: drone, intensity: 0.35, drop_out_at: "7"}
+  vo:
+    - {t: "The woman was standing at a crosswalk."}
+    - {t: "No umbrella. No coat. A pale sweater gone dark with rain, and her arms hanging straight at her sides."}
+    - {t: "The walk signal in front of her was lit. She didn't walk."}
+    - {t: "Daniel slowed, expecting her to step out in front of him. She didn't move."}
+    - {t: "He waited three seconds."}
+    - {t: "Then he tapped the horn."}
+    - {t: "Her head turned toward the cab.", p: 0.9}
+    - {t: "At the same instant, behind the window of a laundromat across the street, someone else turned."}
+    - {t: "So did a figure under the bus shelter. A figure Daniel had looked straight at and taken for a shadow."}
+    - {t: "None of them raised a hand."}
+    - {t: "All three watched the truck go by.", p: 0.8}
+  shots:
+    - {id: S08_A, covers: [1, 2], framing: "medium, from cab", camera: "slow approach", refs: [WOMAN],
+       prompt: "a woman standing motionless at a lit crosswalk in the rain, cream sweater soaked dark, arms straight down, face turned away"}
+    - {id: S08_B, covers: [3, 3], framing: "insert", camera: "locked", refs: [],
+       prompt: "a pedestrian signal showing the white walking-person symbol, rain streaking past it"}
+    - {id: S08_C, covers: [4, 6], framing: "close-up", camera: "locked", refs: [DANIEL, TRUCK],
+       prompt: "Daniel's hand moving to the center of the steering wheel horn pad, eyes on the woman"}
+    - {id: S08_D, covers: [7, 7], framing: "medium", camera: "locked", refs: [WOMAN],
+       prompt: "the woman's head turns toward camera, face still in deep shadow under wet hair, no features visible"}
+    - {id: S08_E, covers: [8, 8], framing: "wide across street", camera: "slow rack focus", refs: [],
+       prompt: "a dim laundromat window with a still silhouette inside turning toward the street"}
+    - {id: S08_F, covers: [9, 11], framing: "wide", camera: "tracking with truck", refs: [TRUCK],
+       prompt: "a bus shelter with a dark standing figure, the truck passes in the foreground, the figure's head follows it"}
+  sfx:
+    - {cue: engine_idle_cab, in: "1", out: "11e"}
+    - {cue: horn_tap, in: "6+0.5", note: "single short tap; everything except rain and engine ducks -12 dB for 4 s after"}
+
+# ----------------------------------------------------------------------------- S09
+- id: S09
+  title: "The pattern"
+  hud: {time: "2:25 AM", miles_to_exit: 2.4}
+  music: {state: silent_then_pulse, intensity: 0.4, back_in_at: "4"}
+  vo:
+    - {t: "In the mirror, the woman stepped off the curb."}
+    - {t: "She didn't cross. She walked into the lane the truck had just left, and followed it."}
+    - {t: "Not running. Just walking, steadily, in the direction of the sound."}
+    - {t: "Daniel reached over and turned off the radio."}
+    - {t: "He thought of the ambulance. Lights, but no siren. Somebody in this town had already learned something."}
+    - {t: "At the next corner, two men stood under an apartment awning, both facing the wall."}
+    - {t: "He rolled past them with his foot barely on the pedal. No horn. No radio."}
+    - {t: "Neither man turned."}
+    - {t: "Daniel did not have a word for what was wrong with these people. But he understood the pattern well enough to obey it."}
+    - {t: "Rule three. In a silent town, every sound is an announcement.", p: 1.0}
+  shots:
+    - {id: S09_A, covers: [1, 3], framing: "mirror insert", camera: "locked", refs: [WOMAN, TRUCK],
+       prompt: "in the side mirror the woman walks into the empty lane behind the truck, steady, small and distant"}
+    - {id: S09_B, covers: [4, 4], framing: "insert", camera: "locked", refs: [TRUCK],
+       prompt: "a finger pressing the truck radio power knob, dashboard amber light"}
+    - {id: S09_C, covers: [5, 5], framing: "close-up", camera: "slow push", refs: [DANIEL],
+       prompt: "Daniel's face thinking, red-and-white light flicker reflected faintly in his eyes as a memory"}
+    - {id: S09_D, covers: [6, 8], framing: "wide", camera: "slow tracking", refs: [TRUCK],
+       prompt: "two men under an apartment awning facing the brick wall, backs to the street, the truck passes slowly in the foreground"}
+    - {id: S09_E, covers: [9, 10], framing: "aerial wide", camera: "slow rise", refs: [TRUCK],
+       prompt: "the lone truck on a dark grid of small-town streets, scattered still figures under streetlamps"}
+  overlays:
+    - {style: rule, text: "RULE 3\nIn a silent town, every sound is an announcement.", in: "10", out: "10e+1.0"}
+  sfx:
+    - {cue: radio_low_instrumental, in: "1", out: "4+0.6", gain_db: -20}
+    - {cue: radio_click_off, in: "4+0.6", note: "after this the cab is dry: engine, rain, nothing else"}
+    - {cue: engine_idle_cab, in: "1", out: "10e"}
+
+# ----------------------------------------------------------------------------- S10
+- id: S10
+  title: "Vehicle screening"
+  hud: {time: "2:29 AM", miles_to_exit: 1.7}
+  music: {state: pulse, intensity: 0.4}
+  vo:
+    - {t: "At Main and Mill Street, a county health department van sat at an angle across one lane."}
+    - {t: "Its rear doors were open."}
+    - {t: "Daniel slowed almost to a stop."}
+    - {t: "Inside, boxed face shields. Unopened protective suits. A folding chair. A cooler with a biohazard sticker."}
+    - {t: "Taped to the inside of the rear door, in the full glare of his headlights, was a printed checklist. He could read the heading from the cab."}
+    - {t: "Vehicle screening.", p: 0.7}
+    - {t: "Below it, three steps. Driver window down. Temperature check. Destination."}
+    - {t: "Beside the checklist hung a contact sheet. A long column of addresses."}
+    - {t: "And next to nearly every one, the same two words in thick black marker."}
+    - {t: "No response.", p: 0.9}
+    - {t: "The handwriting looked familiar. Daniel couldn't place it."}
+    - {t: "Not yet.", p: 0.8}
+  shots:
+    - {id: S10_A, covers: [1, 3], framing: "through windshield", camera: "slow creep", refs: [VAN, TRUCK],
+       prompt: "a white health department van parked diagonally across an intersection lane, rear doors open, headlights washing over it"}
+    - {id: S10_B, covers: [4, 4], framing: "slow pan", camera: "pan across cargo", refs: [VAN],
+       prompt: "inside the van's cargo area: stacked face shields, sealed protective suits in plastic, a folding chair strapped to the wall, a cooler with a biohazard symbol"}
+    - {id: S10_C, covers: [5, 7], framing: "insert", camera: "slow push", refs: [VAN],
+       prompt: "a printed checklist sheet taped inside the open van door, BLANK paper (text added as overlay), headlight glare"}
+    - {id: S10_D, covers: [8, 10], framing: "insert", camera: "slow tilt down", refs: [VAN],
+       prompt: "a long contact sheet with ruled lines, a column of heavy black marker strokes beside the rows, BLANK paper (text as overlay)"}
+    - {id: S10_E, covers: [11, 12], framing: "close-up", camera: "locked", refs: [DANIEL],
+       prompt: "Daniel's eyes narrowing, a flicker of recognition, headlight bounce on his face"}
+  overlays:
+    - {style: printed, text: "VEHICLE SCREENING\n1. Driver window down\n2. Temperature check\n3. Destination", in: "5+1.5", out: "7e+0.4", anchor_shot: S10_C}
+    - {style: marker, text: "NO RESPONSE  ×14", in: "9", out: "10e+0.6", anchor_shot: S10_D, note: "repeat the marker phrase down the column; same hand font as S02"}
+  sfx:
+    - {cue: engine_idle_cab, in: "1", out: "12e"}
+    - {cue: van_door_creak, in: "2", out: "4e", gain_db: -6}
+
+# ----------------------------------------------------------------------------- S11
+- id: S11
+  title: "The price of one sound"
+  hud: {time: "2:31 AM", miles_to_exit: 1.6}
+  music: {state: pulse_rising, intensity: 0.55}
+  vo:
+    - {t: "There was room to pass. Barely."}
+    - {t: "Daniel brought the truck within a foot of the van, watching the gap in his right mirror."}
+    - {t: "He never saw the loose panel of construction fencing on the left."}
+    - {t: "The rear corner of the box caught it.", p: 0.3}
+    - {t: "Steel dragged across steel, and then the whole panel went down in the street with a long, ringing crash.", p: 1.0}
+    - {t: "In a second-floor window above the pharmacy, a silhouette rose into view."}
+    - {t: "Then another, behind the pharmacy's dark glass."}
+    - {t: "Inside the open van, something under the pile of protective suits shifted."}
+    - {t: "Daniel didn't look back."}
+    - {t: "He straightened the wheel and pushed the pedal down, and for the first time that night, he stopped caring whether the groceries arrived in one piece.", p: 0.8}
+  shots:
+    - {id: S11_A, covers: [1, 2], framing: "mirror insert", camera: "locked", refs: [TRUCK, VAN],
+       prompt: "right side mirror: the truck's box inches from the van's open door, tight gap"}
+    - {id: S11_B, covers: [3, 5], framing: "rear exterior", camera: "locked, slight shake", refs: [TRUCK],
+       prompt: "the rear corner of the white cargo box snags a free-standing metal construction fence panel and drags it over, sparks of rain"}
+    - {id: S11_C, covers: [6, 7], framing: "wide up", camera: "slow tilt", refs: [],
+       prompt: "a small-town pharmacy corner at night, a silhouette standing in a second-floor window, another dark figure behind the shop glass"}
+    - {id: S11_D, covers: [8, 8], framing: "medium", camera: "locked", refs: [VAN],
+       prompt: "inside the van, a pile of plastic-wrapped protective suits sags and shifts slightly, nothing visible beneath"}
+    - {id: S11_E, covers: [9, 10], framing: "front exterior low", camera: "truck rushes past camera", refs: [TRUCK],
+       prompt: "the white box truck accelerating toward camera down the wet street, headlights flaring"}
+  sfx:
+    - {cue: fence_drag, in: "4"}
+    - {cue: fence_clatter, in: "5+0.4"}
+    - {cue: boxes_shift, in: "10"}
+    - {cue: engine_rev, in: "10"}
+
+# ----------------------------------------------------------------------------- S12
+- id: S12
+  title: "The checkpoint"
+  hud: {time: "2:38 AM", miles_to_exit: 0.4}
+  music: {state: relief_thin, intensity: 0.25, note: "brief loosening, never triumphant"}
+  vo:
+    - {t: "The eastern exit appeared beyond a row of dark houses."}
+    - {t: "Two light towers turned the road white."}
+    - {t: "Concrete barriers funneled both lanes into one. Behind a lowered gate stood a white utility van and a dark SUV."}
+    - {t: "And beside the gate, a man in a white protective suit."}
+    - {t: "He raised one arm.", p: 0.6}
+    - {t: "Stop.", p: 0.9}
+    - {t: "Daniel felt his chest loosen for the first time since the gas station."}
+    - {t: "Someone was still working. Someone in this town still had a job, and a procedure, and a reason to be standing in the rain."}
+    - {t: "Four tenths of a mile to open highway, on the other side of that gate."}
+    - {t: "He stopped on the gravel turnout, well short of the barrier, and left the engine running."}
+    - {t: "He even left himself room to back up. Not because he expected to need it. Habit.", p: 0.8}
+  shots:
+    - {id: S12_A, covers: [1, 2], framing: "far wide", camera: "slow push", refs: [CHECKPOINT],
+       prompt: "a floodlit temporary roadblock at the end of a dark residential street, light towers glaring through rain"}
+    - {id: S12_B, covers: [3, 4], framing: "medium wide", camera: "slow drift", refs: [CHECKPOINT, WORKER],
+       prompt: "concrete barriers, a lowered striped gate arm, a white utility van and dark SUV behind it, a figure in a white protective suit standing beside the gate, face too far to read"}
+    - {id: S12_C, covers: [5, 6], framing: "through windshield", camera: "locked", refs: [WORKER],
+       prompt: "the suited figure raises one arm, palm out, silhouetted against floodlights"}
+    - {id: S12_D, covers: [7, 8], framing: "close-up", camera: "locked", refs: [DANIEL],
+       prompt: "Daniel exhales, shoulders dropping, floodlight wash on his face, almost a smile"}
+    - {id: S12_E, covers: [9, 11], framing: "high wide", camera: "slow crane down", refs: [TRUCK, CHECKPOINT],
+       prompt: "the truck stopped on a wide gravel turnout before the barriers, a clear stretch of empty road behind it"}
+  sfx:
+    - {cue: generator_hum, in: "2", out: "11e"}
+    - {cue: engine_idle_cab, in: "1", out: "11e"}
+
+# ----------------------------------------------------------------------------- S13
+- id: S13
+  title: "Step one"
+  hud: {time: "2:41 AM", miles_to_exit: 0.4}
+  music: {state: drone_low, intensity: 0.35}
+  vo:
+    - {t: "The man walked to the driver's side and stopped beside the door."}
+    - {t: "White coveralls. Clear goggles. A white mask pulled tight across his mouth and nose."}
+    - {t: "He lifted his hand and pointed down at the window.", p: 0.8}
+    - {t: "Driver window down. Step one."}
+    - {t: "Daniel's hand was already moving toward the switch. Eleven years of habit moved it for him."}
+    - {t: "Then he saw the glove.", p: 0.7}
+    - {t: "The left index finger had torn through the blue nitrile. Under it, the finger bent sideways at the middle joint, and the man didn't seem to know."}
+    - {t: "Daniel took his hand off the switch. He pointed at the gate instead."}
+    - {t: "The man's eyes followed his hand."}
+    - {t: "Then, patiently, he pointed down at the window again.", p: 0.9}
+    - {t: "Rule four. An instruction is only as safe as the person giving it.", p: 1.0}
+  shots:
+    - {id: S13_A, covers: [1, 2], framing: "exterior medium", camera: "locked", refs: [WORKER, TRUCK],
+       prompt: "the suited worker walks up to the truck's driver door in floodlight and rain, goggles and mask, hood down"}
+    - {id: S13_B, covers: [3, 4], framing: "through driver window", camera: "locked", refs: [WORKER, TRUCK], reuse_of: S00_B,
+       prompt: "same as S00_B: gloved index finger pointing down at the closed window"}
+    - {id: S13_C, covers: [5, 5], framing: "insert", camera: "slow push", refs: [DANIEL, TRUCK],
+       prompt: "Daniel's fingers moving toward the power window switch on the door armrest"}
+    - {id: S13_D, covers: [6, 7], framing: "extreme close-up", camera: "locked, rack focus", refs: [WORKER],
+       prompt: "the blue nitrile glove torn across the index finger, the finger bent sideways at the middle joint, no blood, no bone"}
+    - {id: S13_E, covers: [8, 10], framing: "two-shot through glass", camera: "locked", refs: [DANIEL, WORKER],
+       prompt: "Daniel points toward the gate, the worker's goggled eyes track his hand, then the gloved finger points down again"}
+    - {id: S13_F, covers: [11, 11], framing: "close-up", camera: "very slow push", refs: [TRUCK],
+       prompt: "the window switch with Daniel's hand pulled away from it, rain light rippling across the door panel"}
+  overlays:
+    - {style: rule, text: "RULE 4\nAn instruction is only as safe as the person giving it.", in: "11", out: "11e+1.0"}
+  sfx:
+    - {cue: generator_hum, in: "1", out: "11e"}
+    - {cue: engine_idle_cab, in: "1", out: "11e"}
+    - {cue: coverall_rustle, in: "1+0.5"}
+    - {cue: coverall_rustle, in: "10", gain_db: -4}
+
+# ----------------------------------------------------------------------------- S14
+- id: S14
+  title: "The mask"
+  hud: {time: "2:42 AM", miles_to_exit: 0.4}
+  music: {state: drone_narrow, intensity: 0.5}
+  vo:
+    - {t: "Up close, the mask wasn't wet from the rain."}
+    - {t: "A dark stain had spread outward from the center of it. From the inside."}
+    - {t: "Above the collar of the suit, thin dark lines branched across the skin of his neck, like cracks under ice."}
+    - {t: "And his eyes were wrong. Not glowing. Not red. Just clouded, like a window someone had breathed on."}
+    - {t: "They weren't looking at Daniel's face. They were following his hands.", p: 0.9}
+    - {t: "Then the phone in the dash mount lit up and began to ring.", p: 0.5}
+    - {t: "Twenty-four minutes late, his dispatcher was calling back."}
+    - {t: "The man's head snapped toward the sound."}
+    - {t: "His hand dropped to the door handle. He pulled once. Waited. Pulled again, harder, until the whole door shook in its frame."}
+    - {t: "Daniel killed the ringer. It was already too late."}
+    - {t: "Behind the gate, every door of the van and the SUV stood open.", p: 0.8}
+  shots:
+    - {id: S14_A, covers: [1, 3], framing: "close-up through glass", camera: "slow push", refs: [WORKER],
+       prompt: "REVEAL: the worker's mask with a dark stain spreading from its center, thin dark branching lines on his neck above the coverall collar"}
+    - {id: S14_B, covers: [4, 5], framing: "extreme close-up", camera: "locked", refs: [WORKER],
+       prompt: "clouded milky eyes behind clear goggles, not glowing, pupils barely visible, tracking slowly to one side"}
+    - {id: S14_C, covers: [6, 7], framing: "insert", camera: "locked", refs: [TRUCK],
+       prompt: "the phone in the dash mount lights up bright white in the dark cab (caller UI added as overlay)"}
+    - {id: S14_D, covers: [8, 9], framing: "exterior close", camera: "locked, door shakes", refs: [WORKER, TRUCK],
+       prompt: "the worker's head jerks toward the cab, his torn-gloved hand yanks the outside door handle, the door rattles"}
+    - {id: S14_E, covers: [10, 10], framing: "insert", camera: "locked", refs: [DANIEL, TRUCK],
+       prompt: "Daniel's thumb jabs the phone screen, the light dies"}
+    - {id: S14_F, covers: [11, 11], framing: "rack focus past worker", camera: "focus pull", refs: [CHECKPOINT],
+       prompt: "focus shifts past the worker's shoulder to the van and SUV behind the gate, all their doors standing open, interiors dark"}
+  overlays:
+    - {style: phone, text: "DISPATCH\nincoming call", in: "6+0.3", out: "10+0.8", anchor_shot: S14_C}
+  sfx:
+    - {cue: generator_hum, in: "1", out: "11e"}
+    - {cue: phone_ring_mount, in: "6+0.4", out: "10+0.8", note: "loud, hard stop when silenced"}
+    - {cue: handle_pull, in: "9+0.5"}
+    - {cue: handle_pull, in: "9+2.4", gain_db: 3}
+
+# ----------------------------------------------------------------------------- S15
+- id: S15
+  title: "The alarm"
+  hud: {time: "2:43 AM", miles_to_exit: 0.4}
+  music: {state: pulse_fast, intensity: 0.7, note: "pulse locks to the backup alarm rhythm"}
+  vo:
+    - {t: "There was no one at the folding table under the lights."}
+    - {t: "No one behind the wheel of the SUV."}
+    - {t: "A second protective suit lay crumpled against the concrete barrier. Daniel had taken it for a pile of supplies."}
+    - {t: "He shifted into reverse."}
+    - {t: "And the truck did what fleet trucks are built to do."}
+    - {t: "It began to beep.", p: 0.8}
+    - {t: "Loud. Steady. Impossible to switch off from the driver's seat."}
+    - {t: "The man at the window went completely still."}
+    - {t: "Behind the barrier, the crumpled suit moved. A hand came up onto the concrete. Then a head."}
+    - {t: "In the open van, a third figure sat up."}
+    - {t: "Every one of them turned toward the same sound."}
+    - {t: "Daniel pressed the accelerator.", p: 0.5}
+  shots:
+    - {id: S15_A, covers: [1, 3], framing: "slow pan", camera: "pan across checkpoint", refs: [CHECKPOINT],
+       prompt: "an abandoned folding table with scattered papers and a tipped chair under floodlights, empty SUV, a white protective suit crumpled against a concrete barrier"}
+    - {id: S15_B, covers: [4, 4], framing: "insert", camera: "locked", refs: [TRUCK],
+       prompt: "Daniel's hand pulls the column gear shifter into reverse, dashboard amber"}
+    - {id: S15_C, covers: [5, 7], framing: "rear exterior", camera: "locked", refs: [TRUCK],
+       prompt: "the rear of the white box truck, white reverse lights snapping on, rain in the beams"}
+    - {id: S15_D, covers: [8, 9], framing: "medium", camera: "locked", refs: [CHECKPOINT],
+       prompt: "behind the barrier, a gloved hand grips the top of the concrete, a hooded head rises slowly into the floodlight"}
+    - {id: S15_E, covers: [10, 11], framing: "medium", camera: "slow push", refs: [CHECKPOINT],
+       prompt: "inside the open utility van a figure in a white suit sits upright, face in shadow, turned toward camera"}
+    - {id: S15_F, covers: [12, 12], framing: "low exterior", camera: "locked", refs: [TRUCK],
+       prompt: "the truck's rear tires spin on wet gravel, the truck starts rolling backward"}
+  sfx:
+    - {cue: generator_hum, in: "1", out: "12e"}
+    - {cue: backup_alarm_loop, in: "6", out: "12e", note: "continues through S16 until the truck shifts into drive in S17"}
+    - {cue: engine_rev, in: "12+0.5"}
+
+# ----------------------------------------------------------------------------- S16
+- id: S16
+  title: "One inch"
+  hud: {time: "2:43 AM", miles_to_exit: 0.4}
+  music: {state: pulse_fast, intensity: 0.85, drop_out_at: "9"}
+  vo:
+    - {t: "The man moved with the truck."}
+    - {t: "One step. Two."}
+    - {t: "Then a sudden, violent burst of speed that no injured man should have had."}
+    - {t: "His palm hit the glass beside Daniel's face.", p: 0.6}
+    - {t: "The mask slid down below his chin. His jaw hung open at a wrong angle, the skin of his throat pulled tight, and he made no attempt to speak."}
+    - {t: "The second blow rocked the mirror on its arm."}
+    - {t: "Behind him, the others were coming around the barrier, toward the beeping."}
+    - {t: "The third blow didn't crack the glass."}
+    - {t: "It did something worse.", p: 0.8}
+    - {t: "Somewhere inside the door, a part gave way, and the window dropped."}
+    - {t: "One inch.", p: 1.0}
+    - {t: "Cold air and rain came through the gap. And with them, four gloved fingertips, curling over the top of the glass.", p: 1.2}
+  shots:
+    - {id: S16_A, covers: [1, 3], framing: "from inside cab", camera: "handheld, moving", refs: [WORKER, TRUCK],
+       prompt: "through the driver window the worker walks alongside the reversing truck, then lunges, blurred with speed"}
+    - {id: S16_B, covers: [4, 4], framing: "close-up", camera: "impact shake", refs: [WORKER, DANIEL],
+       prompt: "a gloved palm slams flat against the driver window inches from Daniel's face, water spraying off the glass"}
+    - {id: S16_C, covers: [5, 5], framing: "close-up through glass", camera: "locked", refs: [WORKER],
+       prompt: "the mask slipped below his chin, jaw hanging crooked, neck skin stretched with dark branching lines, mouth open but silent, no teeth gore"}
+    - {id: S16_D, covers: [6, 7], framing: "mirror insert", camera: "shaking", refs: [TRUCK, CHECKPOINT],
+       prompt: "the side mirror vibrating on its arm, in it two white-suited figures rounding the concrete barrier"}
+    - {id: S16_E, covers: [8, 9], framing: "extreme close-up", camera: "impact shake", refs: [WORKER],
+       prompt: "third palm strike on the glass, the glass does not crack"}
+    - {id: S16_F, covers: [10, 11], framing: "close-up on top edge of window", camera: "locked", refs: [TRUCK],
+       prompt: "the top edge of the driver window glass jolts down in its frame, leaving a one-inch dark gap at the top"}
+    - {id: S16_G, covers: [12, 12], framing: "extreme close-up", camera: "very slow push", refs: [WORKER, TRUCK],
+       prompt: "four blue-gloved fingertips curl over the top edge of the lowered glass from outside, rain blowing through the gap"}
+  sfx:
+    - {cue: backup_alarm_loop, in: "1", out: "12e"}
+    - {cue: palm_hit_glass, in: "4+0.1"}
+    - {cue: palm_hit_glass, in: "6", gain_db: 2}
+    - {cue: mirror_rattle, in: "6+0.1"}
+    - {cue: palm_hit_glass, in: "8+0.2", gain_db: 3}
+    - {cue: window_drop_clunk, in: "10+1.2"}
+    - {cue: rain_gust_inside, in: "12", out: "12e", note: "outside sound suddenly enters the cab: generator, rain, alarm all 6 dB louder"}
+
+# ----------------------------------------------------------------------------- S17
+- id: S17
+  title: "The only open road"
+  hud: {time: "2:44 AM"}
+  music: {state: drone_low, intensity: 0.45, out_at: "15e"}
+  vo:
+    - {t: "The truck was faster than they were. For a few seconds, that was enough."}
+    - {t: "Daniel cut the wheel, swung the truck around on the gravel turnout, and shoved it into drive."}
+    - {t: "The fingertips slid away. In the mirror, three white suits shrank into the floodlights."}
+    - {t: "He pressed the window switch.", p: 0.6}
+    - {t: "The motor whined inside the door. The glass didn't move."}
+    - {t: "The gap stayed open.", p: 0.9}
+    - {t: "As the truck came around, his headlights swept across a sign at the back of the checkpoint. It faced the road into town, and he had never seen its front."}
+    - {t: "Temporary steel legs. A portable lamp. A white panel, printed by the county."}
+    - {t: "Stop. Lower driver window for screening.", p: 1.0}
+    - {t: "It was the same sign he had passed at the town limit. Someone there had blacked out the county's instruction and written their own, in thick marker, pressed hard enough to tear."}
+    - {t: "The same hand that had written no response, address after address."}
+    - {t: "Someone in Bellwether had worked it out before he did. The danger had never been in the air."}
+    - {t: "It was in the people asking you to let them close.", p: 1.0}
+    - {t: "The route screen recalculated. Only one road out was open."}
+    - {t: "It led back through Bellwether.", p: 1.2}
+    - {beat: 4.0}
+  shots:
+    - {id: S17_A, covers: [1, 3], framing: "high wide", camera: "crane follow", refs: [TRUCK, CHECKPOINT],
+       prompt: "the white box truck swinging around on a gravel turnout in a tight turn, three white-suited figures in the floodlights behind it"}
+    - {id: S17_B, covers: [4, 6], framing: "insert", camera: "locked", refs: [DANIEL, TRUCK],
+       prompt: "Daniel's finger holding the window switch up, the glass not moving, a one-inch black gap at the top of the window, rain dripping in"}
+    - {id: S17_C, covers: [7, 8], framing: "headlight sweep", camera: "pan with headlight beam", refs: [CHECKPOINT],
+       prompt: "headlight beam sweeps across a temporary road sign on steel legs at the back of the checkpoint, lamp on top, white panel BLANK (text overlay)"}
+    - {id: S17_D, covers: [9, 9], framing: "close-up", camera: "slow push", refs: [],
+       prompt: "the clean printed white panel, perfectly blank, rain running down it (printed text overlay)"}
+    - {id: S17_E, covers: [10, 11], framing: "match cut", camera: "slow push", refs: [], reuse_of: S02_B,
+       prompt: "match cut to the marker-scrawled panel from S02, then to the NO RESPONSE column from S10"}
+    - {id: S17_F, covers: [12, 13], framing: "close-up", camera: "locked", refs: [DANIEL],
+       prompt: "Daniel's face lit by the dashboard, rain blowing in through the gap onto his collar, realization, no panic"}
+    - {id: S17_G, covers: [14, 15], framing: "insert", camera: "locked", refs: [TRUCK],
+       prompt: "the phone navigation screen glowing (overlay), beyond it through the windshield the lit main street of Bellwether ahead"}
+    - {id: S17_H, covers: [16, 16], framing: "aerial wide", camera: "slow rise, fade to black over last 2 s", refs: [TRUCK],
+       prompt: "the lone truck driving back into the dark small town, tiny figures standing under streetlamps along the road"}
+  overlays:
+    - {style: printed, text: "STOP\nLOWER DRIVER WINDOW\nFOR SCREENING", in: "9-0.2", out: "9e+0.8", anchor_shot: S17_D}
+    - {style: marker, text: "KEEP VEHICLE\nWINDOWS CLOSED", in: "10", out: "10e", anchor_shot: S17_E}
+    - {style: phone, text: "Route recalculated · 1 route · via BELLWETHER", in: "14+0.5", out: "15e+0.5", anchor_shot: S17_G}
+  sfx:
+    - {cue: backup_alarm_loop, in: "1", out: "2+1.5", note: "stops the instant he shifts into drive"}
+    - {cue: engine_rev, in: "2+1.5"}
+    - {cue: window_motor_whine, in: "4+0.3", out: "5e"}
+    - {cue: rain_gust_inside, in: "4", out: "16e", gain_db: -6, note: "the gap stays audible to the very end"}
+    - {cue: engine_idle_cab, in: "6", out: "16e"}
